@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+body{
+    background-color: #d1d1d5;
+    overflow-y: hidden;
+}
+
+.container{
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-snap-align: start;
+}
+
+
+.sec3{
+    background-image: url(../imgs/she.jpg);
+    background-position: center;
+    position: relative;
+}
+
+
+.incontainer{
+    position: absolute;
+    background-color: black;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 80vh;
+    width: 35vw;
+    border-radius: 5px;
+    opacity: 0.8;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+input{
+    width: 250px;
+    height: 30px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    border-radius: 2.5px;
+    color: white;
+    background-color: rgb(46, 46, 46);
+}
+.submit{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: black;
+    margin-top: 15px;
+    width: 150px;
+    background: #04f5c7;
+    
+}
+h3{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 32px;
+    margin-bottom: 25px;;
+}
+input::-webkit-input-placeholder {
+    color: #AAA;
+    padding-left: 15px;
+  }
+  
+input:focus::-webkit-input-placeholder {
+    color: dodgerblue;
+  }
+  
+input:focus+.underline {
+    transform: scale(1);
+  }
+  
+.underline {
+    background-color: dodgerblue;
+    display: inline-block;
+    height: 2px;
+    margin-top: -4px;
+    position:  relative;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    width: 250px;
+  }
+span{
+    margin-bottom: 20px;
+}
+form{
+    margin-left: 50%;
+    margin-right: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
