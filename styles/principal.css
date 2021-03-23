@@ -34,6 +34,7 @@ body{
   font-size: var(--normal-font-size);
   transition: .5s;
   background: #d1d1d5;
+  
 }
 h3{
   margin: 0;
@@ -151,4 +152,111 @@ a{
 /*Rotate icon*/
 .rotate{
   transform: rotate(180deg);
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+}
+
+.search{
+    background: #e6efff;
+    border: none;
+    border-radius: 2px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    outline: none;
+    width: 250px;
+    height: 30px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.search:hover{
+    background-color: #d1d1d5;
+}
+
+input::-webkit-input-placeholder {
+    color: #AAA;
+    padding-left: 15px;
+  }
+  
+input:focus::-webkit-input-placeholder {
+    color: #1b1c34;
+  }
+  
+input:focus+.underline {
+    transform: scale(1);
+  }
+
+.spanny{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+  
+.underline {
+    background-color: #1b1c34;
+    display: inline-block;
+    height: 2px;
+    margin-top: -4px;
+    position:  relative;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    width: 250px;
+  }
+
+.search_button{
+    background-color: transparent;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    outline: none;
+    border-radius: 2px;
+    height: 30px;
+}
+
+.search_button:hover{
+    background-color: #1b1c34;
+    color:white;
+
+}
+
+.body{
+    width: 72vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user_nav{
+    background: #1b1c34;
+    height: 100vh;
+    width: 20vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    align-items: center;
+
+}
+
+#person{
+    color: white;
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.nav__name{
+    color: white;
+    position: relative;
 }

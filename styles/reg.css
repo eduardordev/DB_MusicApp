@@ -91,6 +91,7 @@ input{
     border-radius: 2.5px;
     color: white;
     background-color: rgb(46, 46, 46);
+    outline: none;
 }
 
 .submit:hover{

@@ -62,15 +62,44 @@
             </nav>
         </div>
 
-        <form action="">
-            <ion-icon name="search-outline" style="width: 20px; height: 20px;"></ion-icon>
-            <input type="search" name="search" id="search" class="search">
-            <input type="submit" value="Buscar" class="search_button">
-        </form>
+        <div class="body">
+
+            <div>
+                <form action="">
+                    <ion-icon name="search-outline" style="width: 30px; height: 30px"></ion-icon>
+                    <div class="spanny">
+                        <input type="search" name="search" id="search" class="search" placeholder="Buscar canciones...">
+                        <span class="underline"></span>
+                    </div>
+                    <input type="submit" value="Buscar" class="search_button">
+                </form>
+            </div>
+
+    
+            <div>
+                <nav class="user_nav">
+    
+                    
+                        <ion-icon name="person-circle-outline" class="nav__icon" id="person"></ion-icon>
+                        <span class="nav__name">Perfil</span>
+    
+                    
+                </nav>
+            </div>
+
+        </div>
+
+        
+
+        
+        
         <!-- ===== IONICONS ===== -->
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
         
         <!-- ===== MAIN JS ===== -->
         <script src="./js/sidebar.js"></script>
+        <script src="./js/spotify.js"></script>
+
     </body>
 </html>

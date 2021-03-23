@@ -1,5 +1,7 @@
 const pg = require('pg')
 const connectionString = "postgres://postgres:456528@localhost/127.0.0.1:58133/nameOfDatabase/proyecto1"
+//pone tus credenciales de postgre
+
 
 const client = new pg.Client(connectionString);
 
