@@ -58,10 +58,12 @@ figure{
 
 .navlinks li a{
     transition: all 0.3s ease 0s;
+    
 }
 
 .navlinks li a:hover{
     color:#04f5c7;
+    
 }
 
 .container{
