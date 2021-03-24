@@ -229,9 +229,10 @@ input:focus+.underline {
 
 .body{
     width: 72vw;
-    height: 80vh;
+    height: 40px;
+    margin-top: -15px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -259,4 +260,24 @@ input:focus+.underline {
 .nav__name{
     color: white;
     position: relative;
+}
+
+.inside{
+    background-color:#728c9c;
+    width: 81vw;
+    height: 80vw;
+    margin-left: -1vw;
+    position: fixed;
+    left: 0;
+    top: 10vh;
+    
+}
+
+.player{
+    background-color:  #d1d1d5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 80vw;
+    height: 100px;
 }
