@@ -22,7 +22,7 @@ router.post('/post/newuser', async function (req, res, next) {
     res.send(JSON.stringify({
         "result": resultado
     }))
-    console.log("ususario creado con exito");
+    console.log("usuario creado con exito");
 });
 
 /*
