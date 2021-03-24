@@ -12,6 +12,7 @@ async function register(user, password, nombre, apellido) {
         })
     })
     result = await result.json();
+    
     console.log(result);
     alert(result.result);
     //if (!result.success) alert("FAILED! ")
@@ -24,6 +25,7 @@ function inputUser() {
     // caraibles para almacenar los datos ingresados por el usuario
 
     const nombre = document.getElementById("name_id").value;
+    console.log(nombre);
     const apellido = document.getElementById("secname_id").value;
     const password = document.getElementById("passw_id").value;
     const user = document.getElementById("usern").value;
