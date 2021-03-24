@@ -1,6 +1,6 @@
 //funcion asincrona para hacer un post en la base de datos
 //comentario nuevo
-async function register(nombre, apellido, user, password) {
+async function register(user, password, nombre, apellido) {
 
     let result = await fetch("http://localhost:8080/post/newuser", {
         method: "POST", headers: { "content-type": "application/json" },
@@ -27,8 +27,9 @@ function inputUser() {
     const apellido = document.getElementById("secname_id").value;
     const password = document.getElementById("passw_id").value;
     const user = document.getElementById("usern").value;
+    console.log(user);
     
-
+/*
     //si el ususario ingreso un nombre correcto y no existe en la base de datos se devuele un true
     if(user){
         usercheck= true;
@@ -46,13 +47,14 @@ function inputUser() {
     
     //si usercheck y passcheck son true, se hace el registro en la base de datos y se borran los datos 
     if(usercheck && passcheck){
-        register(user, password, nombre, apellido)
+        register(user, password, nombre, apellido);
         document.getElementById("name_id").value="";
         document.getElementById("secname_id").value="";
         document.getElementById("passw_id").value="";
         document.getElementById("usern").value="";
     }
+    */
 }
-
+register(user, password, nombre, apellido);
 const btn = document.getElementById("btn");
 btn.addEventListener("click", inputUser);
