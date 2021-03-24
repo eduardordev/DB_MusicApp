@@ -10,11 +10,11 @@ router.post('/post/newuser', async function (req, res, next) {
 
     let user = req.body.user;
     let password = req.body.password;
-    let resultado = "Ususario creado con exito"
+    let resultado = "Usuario creado con exito"
     // se usa bcrypt para hacer un hash de la contraseña del ususario
     var hashpassword = bcrypt.hashSync(req.body.password, 10);
 
-    await pool.query("insert into usuarios values($1,$2,$3,$4,$5)", [user, password, "false", "false", "false"],
+    await pool.query("insert into usuarios values($3,$4,$1,$2)", [user, password, "false", "false", "false", "false", "false"],
         function (err, result) {
             if (err) throw err;
         })
@@ -25,6 +25,7 @@ router.post('/post/newuser', async function (req, res, next) {
     console.log("ususario creado con exito");
 });
 
+/*
 //Handle POST request for User Login
 router.post('/login', async function (req, res, next) {
     let user = req.body.user;
@@ -40,7 +41,7 @@ router.post('/login', async function (req, res, next) {
                 /*
                 res.send(JSON.stringify({
                     "result": result.rows[0]
-                }))*/
+                }))
                 userdb = result.rows[0].usuario
                 passDb = result.rows[0].password
                 adminDb = result.rows[0].administrador
@@ -120,5 +121,6 @@ router.post('/admin/check', async function (req, res, next) {
     console.log("Se ha enviado todo ")
 
 })
+*/
 
 module.exports = router;
