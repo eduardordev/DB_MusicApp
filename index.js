@@ -1,15 +1,59 @@
-const {Client} = require('pg')
-const client = new Client ({
-	user: "postgres",
-	password: "12345",
-	host: "localhost",
-	port: 5432,
-	database: "Proyecto"
-})
+const { Pool } = requiere ('pg');
 
-client.connect()
-.then(() => console.log("Conected seccessfully"))
-.then(() => client.query("select * from musica"))
-.then(results => console.table(results.rows))
-.catch(e => console.error)
-.finally(() => client.end())
+new config = {
+	user: 'postgres',
+	host: 'localhost',
+	password: ' ',
+	database: 'library'
+};
+
+const pool = new Pool (config);
+
+const getMusic = async () => {
+	try {
+		const res = await pool.querty ('select * from music')
+		console.log(res.rows)
+		pool.end();
+	} catch(e) {
+		console.log(e);
+	}
+};
+
+const insertUser = async () => {
+	try{
+	const text = 'INSERT INTO users(username, password) VALUES($1, $2)'
+	const values = ['john' , 'john1234']
+	
+	const res = await pool.querty(text, values);
+	console.log(res);
+	pool.end();
+	}catch(e){
+		console.log(e);
+
+	}
+	
+	
+
+}
+const deleteUser = async () => {
+	const text = 'DELETE FROM users WHERE username = $1';
+	const value = ['john'];
+
+	const res = await pool.query(text, value);
+	console.log (res)
+}
+
+
+const editUser = async () => {
+	const text = 'UPDATE users SET username = $1 WHERE username = $2';
+	const values = ['John', 'ryan'];
+
+	const res = await pool.query(text, values);
+	console.log(res);
+
+};
+
+editUser();
+//deleteUser();
+
+//getMusic();
