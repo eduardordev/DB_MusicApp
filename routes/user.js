@@ -16,6 +16,8 @@ router.post('/post/newuser', async function (req, res, next) {
     // se usa bcrypt para hacer un hash de la contraseña del ususario
     var hashpassword = bcrypt.hashSync(req.body.password, 10);
 
+    console.log("INTENTO DE REGISTRO XD");
+
     await pool.query("insert into usuarios values($1, $2, $3, $4, $5, $6, $7)", [user, password, nombre, apellido, "false", "false", "false"],
         function (err, result) {
             if (err) throw err;
@@ -29,8 +31,26 @@ router.post('/post/newuser', async function (req, res, next) {
         })
 
    
-    console.log("usuario creado con exito");
+    
 });
+
+router.get("/get/music", async (req, res) => {
+    const rows = await readTodos();
+    res.setHeader("content-type", "application/json")
+    res.send(JSON.stringify(rows))
+  })
+
+async function readTodos() {
+    try {
+      const results = await pool.query("select artista, cancion from musica");
+      return results.rows;
+    }
+    catch (e) {
+      return [];
+    }
+  }
+  
+  
 
 /*
 //Handle POST request for User Login
