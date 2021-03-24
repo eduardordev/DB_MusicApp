@@ -28,6 +28,8 @@ function inputUser() {
     const password = document.getElementById("passw_id").value;
     const user = document.getElementById("usern").value;
     console.log(user);
+
+    register(user, password, nombre, apellido);
     
 /*
     //si el ususario ingreso un nombre correcto y no existe en la base de datos se devuele un true
@@ -55,6 +57,6 @@ function inputUser() {
     }
     */
 }
-register(user, password, nombre, apellido);
+
 const btn = document.getElementById("btn");
 btn.addEventListener("click", inputUser);
