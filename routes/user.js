@@ -7,12 +7,12 @@ var pool = require('../db/db');
 var superUsuario;
 //Handle POST request for User Registration
 router.post('/post/newuser', async function (req, res, next) {
-
+    console.log(req.body);
     let nombre = req.body.nombre;
     let apellido = req.body.apellido;
-    let user = req.body.user;
-    let password = req.body.password;
-    let resultado = "Usuario creado con exito"
+    let user = req.body.id;
+    let password = req.body.contra;
+    let resultado = "Usuario creado con exito";
     // se usa bcrypt para hacer un hash de la contraseña del ususario
     var hashpassword = bcrypt.hashSync(req.body.password, 10);
 
@@ -21,14 +21,11 @@ router.post('/post/newuser', async function (req, res, next) {
     await pool.query("insert into usuarios values($1, $2, $3, $4, $5, $6, $7)", [user, password, nombre, apellido, "false", "false", "false"],
         function (err, result) {
             if (err) throw err;
-            if(result){
-
-                res.send(JSON.stringify({
-                    "result": resultado
-                }))
-
-            }
         })
+
+        res.send(JSON.stringify({
+            "result": resultado
+        }))
 
    
     

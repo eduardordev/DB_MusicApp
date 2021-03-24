@@ -2,6 +2,8 @@
 //comentario nuevo
 async function register(user, password, nombre, apellido) {
 
+    console.log("async function");
+
     let result = await fetch("http://localhost:8080/post/newuser", {
         method: "POST", headers: { "content-type": "application/json" },
         body: JSON.stringify({
