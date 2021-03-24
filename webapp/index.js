@@ -1,6 +1,6 @@
 const { Pool } = requiere ('pg');
 
-new config = {
+const config = {
 	user: 'postgres',
 	host: 'localhost',
 	password: ' ',
@@ -18,7 +18,7 @@ const getMusic = async () => {
 		console.log(e);
 	}
 };
-
+/*
 const insertUser = async () => {
 	try{
 	const text = 'INSERT INTO users(username, password) VALUES($1, $2)'
@@ -55,5 +55,5 @@ const editUser = async () => {
 
 editUser();
 //deleteUser();
-
-//getMusic();
+*/
+getMusic();

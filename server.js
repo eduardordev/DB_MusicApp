@@ -18,7 +18,7 @@ app.use(express.json(), cors())
 
 
 //si entran al local host se desplega la pagina, index http://localhost:8080/
-app.get("/", (req, res) => res.sendFile(`${__dirname}index.html`))
+app.get("/", (req, res) => res.sendFile(`${__dirname}./webapp/index.html`))
 
 
 app.use('/', indexRouter);
@@ -36,7 +36,7 @@ app.get("/get", async (req, res) => {
 //funcion que hace un querie
 async function readTodos() {
   try {
-    const results = await pool.query("select usuario,password from Usuario");
+    const results = await pool.query("select id, contra from usuarios");
     return results.rows;
   }
   catch (e) {
