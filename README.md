@@ -1,10 +1,6 @@
 # SonidoCloud
 
-Proyecto No. 1 para CC3057 Bases de Datos - UVG 2020
-
-Desarrollado usando python 3.6.9 con PostgreSQL, usando ```psycopg2``` para la conexión con la base de datos relacional , ```pymongo``` para la conexión con la base de datos no relacional, y ```PyQt``` para la interfaz gráfica.
-
-## Uso
+## Instalaciones
 
 Es necesario instalar paquetes previamente, este es un proceso sencillo usando ```pip```:
 
@@ -48,3 +44,16 @@ La aplicacion se buscará por defecto conectarse con Mongo en  ```mongodb://loca
 ### Finalmente
 
 Para ejecutar la aplicación, correr el acrchivo ```Loginaccount.py```:
+
+
+
+
+## Integrantes
+
+Marco Fuentes
+
+Andy Castillo
+
+Michele Benvenuto
+
+Cristina Bautista
