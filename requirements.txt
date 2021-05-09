@@ -1,0 +1,8 @@
+PyQt5==5.14.2
+psycopg2==2.8.4
+fpdf==1.7.2
+pymongo==3.10.1
+urllib.request
+urllib.parse
+re
+webbrowser
