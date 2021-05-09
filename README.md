@@ -48,16 +48,3 @@ La aplicacion se buscará por defecto conectarse con Mongo en  ```mongodb://loca
 ### Finalmente
 
 Para ejecutar la aplicación, correr el acrchivo ```Loginaccount.py```:
-
-
-
-
-## Integrantes
-
-Marco Fuentes
-
-Andy Castillo
-
-Michele Benvenuto
-
-Cristina Bautista
