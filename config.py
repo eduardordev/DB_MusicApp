@@ -10,4 +10,4 @@ def config(archivo='base_de_datos.ini', seccion='postgresql'):
 			db[param[0]] = param[1]
 	else:
 		raise Exception('Existe un error en el .ini'.format(seccion, archivo))
-	return db
+	return db 
