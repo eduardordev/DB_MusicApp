@@ -17,7 +17,7 @@ from PyQt5.QtCore import QFile, QDir
 from HomeUserInactivarEliminar import Ui_HomeUserInactivarEliminar
 from HomeUserModificar import Ui_HomeUserModificar
 from Tienda import Ui_Tienda
-from Mongo import Ui_Mongo
+
 from HomeAdminReporteria import Ui_HomeAdminReporteria
 from HomeUserRegistrar import Ui_HomeUserRegistrar
 from HomeAdminGestionPermisos import Ui_HomeAdminGestionPermisos
