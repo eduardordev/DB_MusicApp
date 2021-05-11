@@ -36,11 +36,6 @@ port= 5432
 ```
 se conectará a la base de datos ```testdb``` en el host ```127.0.01```, puerto ```5432``` como el usuario ```postgres``` y la contraseña ```12345678```.
 
-### Importante - Mongodb
-
-Es necesario que previo a la ejecución de la aplicación se cuente con un servicio de mongo activo.
-
-La aplicacion se buscará por defecto conectarse con Mongo en  ```mongodb://localhost:27017```. En caso sea necesario, cambiar el valor de la variable ```MONGO_PORT``` en el archivo ```Mongo.py``` (linea 17).
 
 ### Finalmente
 
