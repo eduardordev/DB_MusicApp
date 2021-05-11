@@ -24,15 +24,14 @@ class Ui_LoginAccount(object):
         MainWindow.resize(1000, 650)
         MainWindow.setMinimumSize(QtCore.QSize(1000, 650))
         MainWindow.setMaximumSize(QtCore.QSize(1000, 650))
-        MainWindow.setStyleSheet("background-color: rgb(72,35,60);")
+        MainWindow.setStyleSheet("background-color: #d1d1d5;")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(205, 100, 600, 450))
         self.frame.setMinimumSize(QtCore.QSize(600, 450))
         self.frame.setMaximumSize(QtCore.QSize(600, 450))
-        self.frame.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius: 12px;")
+        self.frame.setStyleSheet("background-color: #1c1d32")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -40,17 +39,17 @@ class Ui_LoginAccount(object):
         self.label.setGeometry(QtCore.QRect(210, 60, 195, 45))
         self.label.setMinimumSize(QtCore.QSize(195, 45))
         self.label.setMaximumSize(QtCore.QSize(195, 45))
-        self.label.setStyleSheet("font: 24pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label.setStyleSheet("font: 20pt \"Times\";\n"
+"color: rgb(255, 255, 255);\n"
 "")
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.frame)
         self.label_2.setGeometry(QtCore.QRect(50, 135, 240, 240))
-        self.label_2.setMinimumSize(QtCore.QSize(240, 240))
-        self.label_2.setMaximumSize(QtCore.QSize(240, 240))
+        self.label_2.setMinimumSize(QtCore.QSize(200, 200))
+        self.label_2.setMaximumSize(QtCore.QSize(200, 200))
         self.label_2.setStyleSheet("")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("logo.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("musics.PNG"))
         self.label_2.setScaledContents(True)
         self.label_2.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.label_2.setObjectName("label_2")
@@ -58,25 +57,24 @@ class Ui_LoginAccount(object):
         self.label_3.setGeometry(QtCore.QRect(330, 135, 100, 25))
         self.label_3.setMinimumSize(QtCore.QSize(100, 25))
         self.label_3.setMaximumSize(QtCore.QSize(100, 25))
-        self.label_3.setStyleSheet("font: 18pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_3.setStyleSheet("font: 16pt \"Times\";\n"
+"color: rgb(255, 255, 255);\n"
 "")
         self.label_3.setObjectName("label_3")
         self.textEdit_Username = QtWidgets.QTextEdit(self.frame)
         self.textEdit_Username.setGeometry(QtCore.QRect(330, 160, 220, 30))
         self.textEdit_Username.setMinimumSize(QtCore.QSize(220, 30))
         self.textEdit_Username.setMaximumSize(QtCore.QSize(220, 30))
-        self.textEdit_Username.setStyleSheet("background-color: rgb(150, 172, 183);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 13pt \"Times\";\n"
-"border-radius: 12px;")
+        self.textEdit_Username.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"font: 11pt \"Times\";")
         self.textEdit_Username.setObjectName("textEdit_Username")
         self.label_4 = QtWidgets.QLabel(self.frame)
         self.label_4.setGeometry(QtCore.QRect(330, 205, 110, 25))
         self.label_4.setMinimumSize(QtCore.QSize(110, 25))
         self.label_4.setMaximumSize(QtCore.QSize(110, 25))
-        self.label_4.setStyleSheet("font: 18pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_4.setStyleSheet("font: 16pt \"Times\";\n"
+"color: rgb(255, 255, 255);\n"
 "")
         self.label_4.setObjectName("label_4")
         self.lineEdit_Password = QtWidgets.QLineEdit(self.frame)
@@ -95,15 +93,15 @@ class Ui_LoginAccount(object):
         self.pushButton_Login.setStyleSheet("background-color: rgb(10, 54, 157);\n"
 "font: 14pt \"Times\";\n"
 "color: rgb(255, 255, 255);\n"
-"border-radius: 12px;")
+"border-radius: 8px;")
         self.pushButton_Login.setObjectName("pushButton_Login")
         self.pushButton_Login.clicked.connect(self.getLogin)
         self.label_5 = QtWidgets.QLabel(self.frame)
         self.label_5.setGeometry(QtCore.QRect(440, 320, 60, 16))
         self.label_5.setMinimumSize(QtCore.QSize(60, 16))
         self.label_5.setMaximumSize(QtCore.QSize(60, 16))
-        self.label_5.setStyleSheet("font: 18pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_5.setStyleSheet("font: 16pt \"Times\";\n"
+"color: rgb(255, 255, 255);\n"
 "")
         self.label_5.setObjectName("label_5")
         self.pushButton_CreateAccount = QtWidgets.QPushButton(self.frame)
@@ -113,7 +111,7 @@ class Ui_LoginAccount(object):
         self.pushButton_CreateAccount.setStyleSheet("background-color: rgb(10, 54, 157);\n"
 "font: 14pt \"Times\";\n"
 "color: rgb(255, 255, 255);\n"
-"border-radius: 12px;")
+"border-radius: 8px;")
         self.pushButton_CreateAccount.setObjectName("pushButton_CreateAccount")
         self.pushButton_CreateAccount.clicked.connect(self.openCreateAccount)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -124,7 +122,7 @@ class Ui_LoginAccount(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Member Login"))
+        self.label.setText(_translate("MainWindow", "Login"))
         self.label_3.setText(_translate("MainWindow", "Username"))
         self.textEdit_Username.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
