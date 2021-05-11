@@ -31,58 +31,58 @@ class Ui_MiMusica(object):
         MainWindow.resize(1000, 650)
         MainWindow.setMinimumSize(QtCore.QSize(1000, 650))
         MainWindow.setMaximumSize(QtCore.QSize(1000, 650))
-        MainWindow.setStyleSheet("background-color: rgb(72,35,60);")
+        MainWindow.setStyleSheet("background-color: #d1d1d5;")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(50, 50, 900, 550))
         self.frame.setMinimumSize(QtCore.QSize(900, 550))
         self.frame.setMaximumSize(QtCore.QSize(900, 550))
-        self.frame.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius: 12px;")
+        self.frame.setStyleSheet("background-color: #1c1d32;\n"
+"border-radius: 5px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.label = QtWidgets.QLabel(self.frame)
-        self.label.setGeometry(QtCore.QRect(130, 50, 205, 50))
-        self.label.setMinimumSize(QtCore.QSize(205, 50))
-        self.label.setMaximumSize(QtCore.QSize(205, 50))
-        self.label.setStyleSheet("font: 24pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
-"")
-        self.label.setObjectName("label")
+
+
         self.label_2 = QtWidgets.QLabel(self.frame)
-        self.label_2.setGeometry(QtCore.QRect(20, 20, 100, 100))
-        self.label_2.setMinimumSize(QtCore.QSize(100, 100))
-        self.label_2.setMaximumSize(QtCore.QSize(100, 100))
+        self.label_2.setGeometry(QtCore.QRect(100, 100, 100, 100))
+        self.label_2.setMinimumSize(QtCore.QSize(225, 205))
+        self.label_2.setMaximumSize(QtCore.QSize(225, 205))
         self.label_2.setStyleSheet("")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("logo.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("musics.PNG"))
         self.label_2.setScaledContents(True)
         self.label_2.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.label_2.setObjectName("label_2")
+        
         self.label_7 = QtWidgets.QLabel(self.frame)
-        self.label_7.setGeometry(QtCore.QRect(30, 160, 280, 25))
-        self.label_7.setMinimumSize(QtCore.QSize(280, 25))
-        self.label_7.setMaximumSize(QtCore.QSize(280, 25))
+        self.label_7.setGeometry(QtCore.QRect(60, 350, 280, 25))
+        self.label_7.setMinimumSize(QtCore.QSize(350, 25))
+        self.label_7.setMaximumSize(QtCore.QSize(350, 25))
         self.label_7.setStyleSheet("font: 14pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+"color: #ffffff;\n"
 "")
         self.label_7.setObjectName("label_7")
+
+
         self.tableWidget = QtWidgets.QTableWidget(self.frame)
-        self.tableWidget.setGeometry(QtCore.QRect(30, 190, 841, 321))
-        self.tableWidget.setStyleSheet("font: 13pt \"Times\";\n"
-"color: rgb(64, 55, 110);\n"
-"background-color: rgb(212, 228, 188);")
+        self.tableWidget.setGeometry(QtCore.QRect(460, 30, 400, 490))
+        self.tableWidget.setStyleSheet("font: 18pt \"Times\";\n"
+"color: #1b1c34;\n"
+"background-color: #EDFEFB;")
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
+
+
         self.label_8 = QtWidgets.QLabel(self.frame)
-        self.label_8.setGeometry(QtCore.QRect(30, 110, 210, 50))
+        self.label_8.setGeometry(QtCore.QRect(150, 290, 210, 50))
         self.label_8.setMinimumSize(QtCore.QSize(210, 50))
         self.label_8.setMaximumSize(QtCore.QSize(210, 50))
         self.label_8.setStyleSheet("font: 22pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+"color: #FFFFFF;\n"
 "")
         self.label_8.setObjectName("label_8")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -95,7 +95,6 @@ class Ui_MiMusica(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Sonido Cloud "))
         self.label_8.setText(_translate("MainWindow", "Mi Música"))
         self.label_7.setText(_translate("MainWindow", "Para reproducir doble click en la canción"))
         self.populateTable()

@@ -28,6 +28,7 @@ class Ui_Tienda(object):
         MainWindow.setStyleSheet("background-color: #d1d1d5;")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(50, 50, 900, 550))
         self.frame.setMinimumSize(QtCore.QSize(900, 550))
@@ -49,6 +50,8 @@ class Ui_Tienda(object):
         self.label_2.setScaledContents(True)
         self.label_2.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.label_2.setObjectName("label_2")
+
+
         self.tableWidget = QtWidgets.QTableWidget(self.frame)
         self.tableWidget.setGeometry(QtCore.QRect(460, 30, 400, 490))
         self.tableWidget.setStyleSheet("font: 18pt \"Times\";\n"
@@ -57,6 +60,8 @@ class Ui_Tienda(object):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
+
+        
         self.textEdit_UserBuscar = QtWidgets.QTextEdit(self.frame)
         self.textEdit_UserBuscar.setGeometry(QtCore.QRect(20, 290, 231, 31))
         self.textEdit_UserBuscar.setMinimumSize(QtCore.QSize(410, 50))
