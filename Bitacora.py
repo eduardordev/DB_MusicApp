@@ -86,10 +86,10 @@ class Ui_Bitacora(object):
     def populateTable(self):
     #clear the table
         self.tableWidget.setRowCount(0)
-        conn = None
+        readbd = None
         params =config()
-        conn = bd.connect(**params)
-        cursor = conn.cursor()
+        readbd = bd.connect(**params)
+        cursor = readbd.cursor()
         query = """  SELECT username, typeofmodification, tablemodified, CAST(itemmodified AS TEXT), newData,
                     CAST(datemodified AS TEXT) FROM logbook """
         cursor.execute(query)
