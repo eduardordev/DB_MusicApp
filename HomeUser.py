@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'HomeUser.ui'
-#
-# Created by: PyQt5 UI code generator 5.12.3
-#
-# WARNING! All changes made in this file will be lost!
-
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
@@ -14,7 +6,7 @@ import psycopg2 as bd
 from Tienda import Ui_Tienda
 from config import config
 from MiMusica import Ui_MiMusica
-#import pgdb as bd
+
 
 class Ui_HomeUser(object):
     def __init__(self, id=0):

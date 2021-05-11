@@ -1,4 +1,3 @@
-
 def getLogin(self,bd,  userdb, passworddb, host, port, database,username, password):
       try:
           conn = bd.connect(user = '',

@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'Carrito.ui'
-#
-# Created by: PyQt5 UI code generator 5.12.3
-#
-# WARNING! All changes made in this file will be lost!
 import sys
 import psycopg2 as bd
 from PyQt5 import QtCore, QtGui, QtWidgets
