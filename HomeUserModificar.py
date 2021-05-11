@@ -1,12 +1,6 @@
-# -*- coding: utf-8 -*-
-
 # Form implementation generated from reading ui file 'HomeUserModificar.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.3
-#
-# WARNING! All changes made in this file will be lost!
-
-import sys
+# Created by: PyQt5 UI code generator 5.15.4
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 import psycopg2 as bd

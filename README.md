@@ -1,12 +1,9 @@
-# SonidoCloud
+# Proyecto de base de datos 
+# Parte 1 y parte 2
 
-Proyecto No. 1 para CC3057 Bases de Datos - UVG 2020
+## Instalaciones
 
-Desarrollado usando python 3.6.9 con PostgreSQL, usando ```psycopg2``` para la conexión con la base de datos relacional , ```pymongo``` para la conexión con la base de datos no relacional, y ```PyQt``` para la interfaz gráfica.
-
-## Uso
-
-Es necesario instalar paquetes previamente, este es un proceso sencillo usando ```pip```:
+Para que funcione el programa, se debe realizar una instalacion mediante ```pip```:
 
 ```bash
 $ pip install pyqt5
@@ -20,14 +17,14 @@ $ pip install pymongo
 ```bash
 $ pip install psycopg2
 ```
-Si no funciona psycopg2 probar:
+En el remoto caso que psicogp2 no funcione, instalar:
 ```bash
 $ pip install psycopg2-binary
 ```
 
-Luego, montar en la base de datos de POSTGRES, el archivo ```Proyecto1.sql```.
+Luego, en una nueva base de POSTGRES,  se debe de copiar el archivo ```Proyecto1.sql```.
 
-### Importante - PostgreSQL
+### PostgreSQL
 
 Para que el sistema se concecte correctamente con la base de datos, es importante que el usuario agregue sus credenciales en el archivo ```base_de_datos.ini``` ubicado en el directorio principal. En este archivo se deben ingresar las credenciales indicadas (host, database, user, password, port) **sin el uso de comillas**. Ejemplo:
 ``` bash
