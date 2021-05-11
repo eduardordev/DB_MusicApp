@@ -16,10 +16,6 @@ from PyQt5.QtCore import QFile, QDir
 from HomeUserInactivarEliminar import Ui_HomeUserInactivarEliminar
 from HomeUserModificar import Ui_HomeUserModificar
 from Tienda import Ui_Tienda
-<<<<<<< HEAD
-
-=======
->>>>>>> b1bbe7b132e4960a855660d2e819baa1c8be376d
 from HomeAdminReporteria import Ui_HomeAdminReporteria
 from HomeUserRegistrar import Ui_HomeUserRegistrar
 from HomeAdminGestionPermisos import Ui_HomeAdminGestionPermisos

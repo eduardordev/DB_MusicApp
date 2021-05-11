@@ -63,7 +63,7 @@ class Ui_HomeUser(object):
         self.pushButton_Exit.setMinimumSize(QtCore.QSize(410, 50))
         self.pushButton_Exit.setMaximumSize(QtCore.QSize(410, 50))
         self.pushButton_Exit.setStyleSheet("background-color: #0ca692;\n"
-"font: 24pt \"Times\";\n"
+"font: 20pt \"Times\";\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 5px;")
         self.pushButton_Exit.setObjectName("pushButton_Exit")
@@ -100,7 +100,7 @@ class Ui_HomeUser(object):
         self.pushButton_Buscar.setMinimumSize(QtCore.QSize(410, 50))
         self.pushButton_Buscar.setMaximumSize(QtCore.QSize(410, 50))
         self.pushButton_Buscar.setStyleSheet("background-color: #0ca692;\n"
-"font: 24pt \"Times\";\n"
+"font: 20pt \"Times\";\n"
 "color: rgb(255, 255, 255);\n"
 "border-radius: 5px;")
         self.pushButton_Buscar.setObjectName("pushButton_Buscar")
