@@ -98,6 +98,7 @@ class Ui_CreateAccount(object):
 
 
         self.pushButton_CreateAccount = QtWidgets.QPushButton(self.frame)
+        
         self.pushButton_CreateAccount.setGeometry(QtCore.QRect(225, 370, 165, 32))
         self.pushButton_CreateAccount.setMinimumSize(QtCore.QSize(165, 32))
         self.pushButton_CreateAccount.setMaximumSize(QtCore.QSize(165, 32))
