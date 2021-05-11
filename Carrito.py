@@ -9,7 +9,7 @@ from config import config
 from fpdf import FPDF
 
 class Ui_Carrito(object):
-    def __init__(self, id):
+    def __init__(self, id=0):
         super(Ui_Carrito, self).__init__()
         self.id = id
 
