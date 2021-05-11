@@ -16,7 +16,7 @@ from config import config
 
 
 class Ui_Tienda(object):
-    def __init__(self, id=0):
+    def __init__(self, id):
         super(Ui_Tienda, self).__init__()
         self.id = id
     

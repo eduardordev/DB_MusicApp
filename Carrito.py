@@ -9,18 +9,23 @@ from config import config
 from fpdf import FPDF
 
 class Ui_Carrito(object):
-    def __init__(self, id=0):
+    def __init__(self, id):
         super(Ui_Carrito, self).__init__()
         self.id = id
 
     def setupUi(self, MainWindow):
+
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1000, 650)
         MainWindow.setMinimumSize(QtCore.QSize(1000, 650))
         MainWindow.setMaximumSize(QtCore.QSize(1000, 650))
         MainWindow.setStyleSheet("background-color: #d1d1d5;")
+
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+
+
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(50, 50, 900, 550))
         self.frame.setMinimumSize(QtCore.QSize(900, 550))
@@ -52,6 +57,8 @@ class Ui_Carrito(object):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
+
+
         self.textEdit_UserBuscar = QtWidgets.QTextEdit(self.frame)
         self.textEdit_UserBuscar.setGeometry(QtCore.QRect(20, 260, 231, 31))
         self.textEdit_UserBuscar.setMinimumSize(QtCore.QSize(410, 50))
@@ -61,6 +68,7 @@ class Ui_Carrito(object):
 "color: #000000;")
         self.textEdit_UserBuscar.setObjectName("textEdit_UserBuscar")
         
+
         self.pushButton_Buscar = QtWidgets.QPushButton(self.frame)
         self.pushButton_Buscar.setGeometry(QtCore.QRect(20, 330, 75, 31))
         self.pushButton_Buscar.setMinimumSize(QtCore.QSize(410, 50))
