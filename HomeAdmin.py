@@ -9,7 +9,6 @@ import sys
 import psycopg2 as bd
 import os
 import csv
-#import pgdb as bd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QFileDialog
 from PyQt5.QtGui import QImage, QPainter
@@ -17,7 +16,6 @@ from PyQt5.QtCore import QFile, QDir
 from HomeUserInactivarEliminar import Ui_HomeUserInactivarEliminar
 from HomeUserModificar import Ui_HomeUserModificar
 from Tienda import Ui_Tienda
-from Mongo import Ui_Mongo
 from HomeAdminReporteria import Ui_HomeAdminReporteria
 from HomeUserRegistrar import Ui_HomeUserRegistrar
 from HomeAdminGestionPermisos import Ui_HomeAdminGestionPermisos
@@ -256,14 +254,6 @@ class Ui_HomeAdmin(object):
         self.pushButton_Tienda.setStyleSheet("background-color: rgb(10, 54, 157);\n"
 "font: 14pt \"Times\";\n"
 "color: rgb(255, 255, 255);")
-        self.pushButton_Mongo = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Mongo.setGeometry(QtCore.QRect(504, 50, 114, 32))
-        self.pushButton_Mongo.setMinimumSize(QtCore.QSize(114, 32))
-        self.pushButton_Mongo.setMaximumSize(QtCore.QSize(114, 32))
-        self.pushButton_Mongo.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-"font: 14pt \"Times\";\n"
-"color: rgb(255, 255, 255);")
-        self.pushButton_Mongo.setObjectName("pushButton_Mongo")
         self.pushButton_Tienda.setObjectName("pushButton_Tienda")
         self.pushButton_MiMusica = QtWidgets.QPushButton(self.frame)
         self.pushButton_MiMusica.setGeometry(QtCore.QRect(378, 50, 114, 32))
@@ -272,7 +262,7 @@ class Ui_HomeAdmin(object):
         self.pushButton_MiMusica.setStyleSheet("background-color: rgb(10, 54, 157);\n"
 "font: 14pt \"Times\";\n"
 "color: rgb(255, 255, 255);")
-        self.pushButton_MiMusica.setObjectName("pushButton_Mongo")
+        self.pushButton_MiMusica.setObjectName("pushButton")
         self.pushButton_Simulacion = QtWidgets.QPushButton(self.frame)
         self.pushButton_Simulacion.setGeometry(QtCore.QRect(140, 140, 100, 30))
         self.pushButton_Simulacion.setMinimumSize(QtCore.QSize(100, 30))
@@ -307,9 +297,7 @@ class Ui_HomeAdmin(object):
         self.pushButton_Buscar.raise_()
         self.pushButton_GestionPermisos.raise_()
         self.pushButton_Tienda.raise_()
-        self.pushButton_Mongo.raise_()
         self.pushButton_Tienda.clicked.connect(self.openTienda)
-        self.pushButton_Mongo.clicked.connect(self.openMongo)
         self.pushButton_MiMusica.raise_()
         self.pushButton_MiMusica.clicked.connect(self.openMiMusica)
         self.pushButton_Simulacion.raise_()
@@ -379,7 +367,6 @@ class Ui_HomeAdmin(object):
         self.pushButton_GestionPermisos.setText(_translate("MainWindow", "Gestión de permisos"))
         self.pushButton_Buscar.clicked.connect(self.populateTable)
         self.pushButton_Tienda.setText(_translate("MainWindow", "Tienda"))
-        self.pushButton_Mongo.setText(_translate("MainWindow", "Mongo"))
         self.pushButton_Simulacion.setText(_translate("MainWindow", "Simulación"))
         self.pushButton_Simulacion.clicked.connect(self.openSimulacion)
         self.pushButton_MiMusica.setText(_translate("MainWindow", "Mi Música"))
@@ -416,11 +403,6 @@ class Ui_HomeAdmin(object):
         self.ui.setupUi(self.window)
         self.window.show()
 
-    def openMongo(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Mongo()
-        self.ui.setupUi(self.window)
-        self.window.show()
 
     def openMiMusica(self, id):
         self.window = QtWidgets.QMainWindow()
