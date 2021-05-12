@@ -8,9 +8,11 @@ from PyQt5.QtGui import QImage, QPainter
 from PyQt5.QtCore import QFile, QDir
 from HomeUserInactivarEliminar import Ui_HomeUserInactivarEliminar
 from HomeUserModificar import Ui_HomeUserModificar
+from Tienda import Ui_Tienda
 from HomeAdminReporteria import Ui_HomeAdminReporteria
 from HomeUserRegistrar import Ui_HomeUserRegistrar
 from HomeAdminGestionPermisos import Ui_HomeAdminGestionPermisos
+from MiMusica import Ui_MiMusica
 from Bitacora import Ui_Bitacora
 from queries import *
 from config import config
@@ -178,6 +180,33 @@ class Ui_HomeAdmin(object):
         self.pushButton_GestionPermisos.clicked.connect(self.openHomeAdminGestionPermisos)
 
 
+
+        self.pushButton_Tienda = QtWidgets.QPushButton(self.frame)
+        self.pushButton_Tienda.setGeometry(QtCore.QRect(610, 30, 114, 32))
+        self.pushButton_Tienda.setMinimumSize(QtCore.QSize(130, 40))
+        self.pushButton_Tienda.setMaximumSize(QtCore.QSize(130, 40))
+        self.pushButton_Tienda.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);")
+        self.pushButton_Tienda.setObjectName("pushButton_Tienda")
+
+
+
+        self.pushButton_MiMusica = QtWidgets.QPushButton(self.frame)
+        self.pushButton_MiMusica.setGeometry(QtCore.QRect(470, 30, 114, 32))
+        self.pushButton_MiMusica.setMinimumSize(QtCore.QSize(130, 40))
+        self.pushButton_MiMusica.setMaximumSize(QtCore.QSize(130, 40))
+        self.pushButton_MiMusica.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);")
+        self.pushButton_MiMusica.setObjectName("pushButton")
+
+
+
+
+
+
+
         self.pushButton_Bitacora = QtWidgets.QPushButton(self.frame)
         self.pushButton_Bitacora.setGeometry(QtCore.QRect(80, 310, 100, 30))
         self.pushButton_Bitacora.setMinimumSize(QtCore.QSize(350, 50))
@@ -201,6 +230,10 @@ class Ui_HomeAdmin(object):
         self.pushButton_Modficiar.raise_()
         self.pushButton_Buscar.raise_()
         self.pushButton_GestionPermisos.raise_()
+        self.pushButton_Tienda.raise_()
+        self.pushButton_Tienda.clicked.connect(self.openTienda)
+        self.pushButton_MiMusica.raise_()
+        self.pushButton_MiMusica.clicked.connect(self.openMiMusica)
         self.pushButton_Bitacora.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -233,6 +266,8 @@ class Ui_HomeAdmin(object):
         self.pushButton_Buscar.setText(_translate("MainWindow", "Buscar"))
         self.pushButton_GestionPermisos.setText(_translate("MainWindow", "Gestión de permisos"))
         self.pushButton_Buscar.clicked.connect(self.populateTable)
+        self.pushButton_Tienda.setText(_translate("MainWindow", "Tienda"))
+        self.pushButton_MiMusica.setText(_translate("MainWindow", "Mi Música"))
         self.pushButton_Bitacora.setText(_translate("MainWindow", "Bitácora"))
         self.pushButton_Bitacora.clicked.connect(self.openBitacora)
 
@@ -254,6 +289,17 @@ class Ui_HomeAdmin(object):
         self.ui.setupUi(self.window)
         self.window.show()
 
+<<<<<<< HEAD
+=======
+
+
+    def openMiMusica(self, id):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_MiMusica(self.id)
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+>>>>>>> parent of 695030d (URGENCIAS)
     def openHomeAdminReporteria(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_HomeAdminReporteria()
