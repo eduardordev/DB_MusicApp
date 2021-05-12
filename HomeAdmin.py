@@ -59,7 +59,7 @@ class Ui_HomeAdmin(object):
 
         self.tableWidget = QtWidgets.QTableWidget(self.frame)
         self.tableWidget.setGeometry(QtCore.QRect(470, 177, 400, 350))
-        self.tableWidget.setStyleSheet("font: 13pt \"Times\";\n"
+        self.tableWidget.setStyleSheet("font: 14pt \"Times\";\n"
         "color: #1b1c34;\n"
         "background-color: #EDFEFB")
         self.tableWidget.setObjectName("tableWidget")

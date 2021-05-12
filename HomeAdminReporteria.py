@@ -14,75 +14,91 @@ class Ui_HomeAdminReporteria(object):
         MainWindow.resize(1000, 650)
         MainWindow.setMinimumSize(QtCore.QSize(1000, 650))
         MainWindow.setMaximumSize(QtCore.QSize(1000, 650))
-        MainWindow.setStyleSheet("background-color: rgb(72,35,60);")
+        MainWindow.setStyleSheet("background-color: #d1d1d5;")
+
+
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+
+
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(50, 50, 900, 550))
-        self.frame.setMinimumSize(QtCore.QSize(900, 550))
-        self.frame.setMaximumSize(QtCore.QSize(900, 550))
-        self.frame.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius: 12px;")
+        self.frame.setMinimumSize(QtCore.QSize(900, 570))
+        self.frame.setMaximumSize(QtCore.QSize(900, 570))
+        self.frame.setStyleSheet("background-color: #1c1d32;\n"
+"border-radius: 5px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.label = QtWidgets.QLabel(self.frame)
-        self.label.setGeometry(QtCore.QRect(130, 30, 205, 50))
-        self.label.setMinimumSize(QtCore.QSize(205, 50))
-        self.label.setMaximumSize(QtCore.QSize(205, 50))
-        self.label.setStyleSheet("font: 24pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
-"")
-        self.label.setObjectName("label")
+
+
+
         self.label_2 = QtWidgets.QLabel(self.frame)
-        self.label_2.setGeometry(QtCore.QRect(20, 0, 100, 100))
+        self.label_2.setGeometry(QtCore.QRect(150, 20, 100, 100))
         self.label_2.setMinimumSize(QtCore.QSize(100, 100))
         self.label_2.setMaximumSize(QtCore.QSize(100, 100))
         self.label_2.setStyleSheet("")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("logo.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("musics.PNG"))
         self.label_2.setScaledContents(True)
         self.label_2.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.label_2.setObjectName("label_2")
+
+
         self.tableWidget = QtWidgets.QTableWidget(self.frame)
-        self.tableWidget.setGeometry(QtCore.QRect(30, 270, 480, 161))
-        self.tableWidget.setMinimumSize(QtCore.QSize(480, 161))
-        self.tableWidget.setMaximumSize(QtCore.QSize(480, 161))
-        self.tableWidget.setStyleSheet("font: 13pt \"Times\";\n"
-"color: rgb(64, 55, 110);\n"
-"background-color: rgb(212, 228, 188);")
+        self.tableWidget.setGeometry(QtCore.QRect(370, 300, 480, 161))
+        self.tableWidget.setMinimumSize(QtCore.QSize(500, 240))
+        self.tableWidget.setMaximumSize(QtCore.QSize(500, 240))
+        self.tableWidget.setStyleSheet("font: 14pt \"Times\";\n"
+        "color: #1b1c34;\n"
+        "background-color: #EDFEFB")
         self.tableWidget.setObjectName("tableWidget")
+
+
+
         self.textEdit_NoArtista = QtWidgets.QTextEdit(self.frame)
-        self.textEdit_NoArtista.setGeometry(QtCore.QRect(30, 210, 160, 31))
-        self.textEdit_NoArtista.setMinimumSize(QtCore.QSize(160, 31))
-        self.textEdit_NoArtista.setMaximumSize(QtCore.QSize(160, 31))
-        self.textEdit_NoArtista.setStyleSheet("background-color: rgb(150, 172, 183);\n"
+        self.textEdit_NoArtista.setGeometry(QtCore.QRect(370, 200, 160, 31))
+        self.textEdit_NoArtista.setMinimumSize(QtCore.QSize(180, 31))
+        self.textEdit_NoArtista.setMaximumSize(QtCore.QSize(180, 31))
+        self.textEdit_NoArtista.setStyleSheet("background-color: #ffffff;\n"
 "font: 13pt \"Times\";\n"
-"color: rgb(255, 255, 255);")
+"color: #000000;")
         self.textEdit_NoArtista.setObjectName("textEdit_NoArtista")
+
+
+
         self.textEdit_NombreArtista = QtWidgets.QTextEdit(self.frame)
-        self.textEdit_NombreArtista.setGeometry(QtCore.QRect(200, 210, 160, 31))
-        self.textEdit_NombreArtista.setMinimumSize(QtCore.QSize(160, 31))
-        self.textEdit_NombreArtista.setMaximumSize(QtCore.QSize(150, 31))
-        self.textEdit_NombreArtista.setStyleSheet("background-color: rgb(150, 172, 183);\n"
+        self.textEdit_NombreArtista.setGeometry(QtCore.QRect(560, 200, 160, 31))
+        self.textEdit_NombreArtista.setMinimumSize(QtCore.QSize(220, 31))
+        self.textEdit_NombreArtista.setMaximumSize(QtCore.QSize(220, 31))
+        self.textEdit_NombreArtista.setStyleSheet("background-color: #ffffff;\n"
 "font: 13pt \"Times\";\n"
-"color: rgb(255, 255, 255);")
+"color: #000000;")
         self.textEdit_NombreArtista.setObjectName("textEdit_NombreArtista")
+
+
+
+
         self.label_8 = QtWidgets.QLabel(self.frame)
-        self.label_8.setGeometry(QtCore.QRect(30, 100, 210, 25))
+        self.label_8.setGeometry(QtCore.QRect(370, 100, 210, 25))
         self.label_8.setMinimumSize(QtCore.QSize(210, 25))
         self.label_8.setMaximumSize(QtCore.QSize(210, 25))
-        self.label_8.setStyleSheet("font: 18pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_8.setStyleSheet("font: 16pt \"Times\";\n"
+"color: #ffffff;\n"
 "")
         self.label_8.setObjectName("label_8")
+
+
+
+
         self.comboBox_OpcionesBuscarFecha = QtWidgets.QComboBox(self.frame)
-        self.comboBox_OpcionesBuscarFecha.setGeometry(QtCore.QRect(30, 130, 400, 31))
-        self.comboBox_OpcionesBuscarFecha.setMinimumSize(QtCore.QSize(400, 31))
-        self.comboBox_OpcionesBuscarFecha.setMaximumSize(QtCore.QSize(400, 31))
-        self.comboBox_OpcionesBuscarFecha.setStyleSheet("background-color: rgb(150, 172, 183);\n"
-"font: 13pt \"Times\";\n"
-"color: rgb(255, 255, 255);")
+        self.comboBox_OpcionesBuscarFecha.setGeometry(QtCore.QRect(370, 130, 400, 31))
+        self.comboBox_OpcionesBuscarFecha.setMinimumSize(QtCore.QSize(500, 30))
+        self.comboBox_OpcionesBuscarFecha.setMaximumSize(QtCore.QSize(500, 30))
+        self.comboBox_OpcionesBuscarFecha.setStyleSheet("background-color: #d1d1d5;\n"
+"font: 14pt \"Times\";\n"
+"color: rgb(0, 0, 0);")
         self.comboBox_OpcionesBuscarFecha.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
         self.comboBox_OpcionesBuscarFecha.setObjectName("comboBox_OpcionesBuscarFecha")
         self.comboBox_OpcionesBuscarFecha.addItem("")
@@ -91,41 +107,59 @@ class Ui_HomeAdminReporteria(object):
         self.comboBox_OpcionesBuscarFecha.addItem("")
         self.comboBox_OpcionesBuscarFecha.addItem("")
         self.comboBox_OpcionesBuscarFecha.addItem("")
+
+
+
+
         self.pushButton_Reportar = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Reportar.setGeometry(QtCore.QRect(430, 490, 80, 31))
+        self.pushButton_Reportar.setGeometry(QtCore.QRect(790, 250, 80, 31))
         self.pushButton_Reportar.setMinimumSize(QtCore.QSize(80, 31))
         self.pushButton_Reportar.setMaximumSize(QtCore.QSize(80, 31))
-        self.pushButton_Reportar.setStyleSheet("background-color: rgb(10, 54, 157);\n"
+        self.pushButton_Reportar.setStyleSheet("background-color: #0ca692;\n"
 "font: 14pt \"Times\";\n"
 "color: rgb(255, 255, 255);")
         self.pushButton_Reportar.setObjectName("pushButton_Reportar")
+
+
+
         self.calendarWidget_Final = QtWidgets.QCalendarWidget(self.frame)
-        self.calendarWidget_Final.setGeometry(QtCore.QRect(570, 360, 310, 171))
+        self.calendarWidget_Final.setGeometry(QtCore.QRect(40, 370, 310, 171))
         self.calendarWidget_Final.setMinimumSize(QtCore.QSize(310, 171))
         self.calendarWidget_Final.setMaximumSize(QtCore.QSize(310, 171))
         self.calendarWidget_Final.setObjectName("calendarWidget_Final")
+        self.calendarWidget_Final.setStyleSheet("background-color: #FFFFFF;")
         self.calendarWidget_Final.clicked[QtCore.QDate].connect(lambda arg : self.set_date_fin(arg.toString('yyyy-MM-dd')))
+        
+        
+        
         self.calendarWidget_Inicial = QtWidgets.QCalendarWidget(self.frame)
-        self.calendarWidget_Inicial.setGeometry(QtCore.QRect(570, 130, 310, 171))
+        self.calendarWidget_Inicial.setGeometry(QtCore.QRect(40, 160, 310, 171))
         self.calendarWidget_Inicial.setMinimumSize(QtCore.QSize(310, 171))
         self.calendarWidget_Inicial.setMaximumSize(QtCore.QSize(310, 171))
         self.calendarWidget_Inicial.setObjectName("calendarWidget_Inicial")
+        self.calendarWidget_Inicial.setStyleSheet("background-color: #FFFFFF;")
         self.calendarWidget_Inicial.clicked[QtCore.QDate].connect(lambda arg : self.set_date_inicio(arg.toString('yyyy-MM-dd')))
+        
+        
+
         self.label_9 = QtWidgets.QLabel(self.frame)
-        self.label_9.setGeometry(QtCore.QRect(30, 180, 440, 25))
+        self.label_9.setGeometry(QtCore.QRect(370, 170, 440, 25))
         self.label_9.setMinimumSize(QtCore.QSize(440, 25))
         self.label_9.setMaximumSize(QtCore.QSize(440, 25))
-        self.label_9.setStyleSheet("font: 18pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_9.setStyleSheet("font: 14pt \"Times\";\n"
+"color: #ffffff;\n"
 "")
         self.label_9.setObjectName("label_9")
+
+
+
         self.comboBox_OpcionesBuscar = QtWidgets.QComboBox(self.frame)
-        self.comboBox_OpcionesBuscar.setGeometry(QtCore.QRect(30, 490, 400, 31))
-        self.comboBox_OpcionesBuscar.setMinimumSize(QtCore.QSize(400, 31))
-        self.comboBox_OpcionesBuscar.setMaximumSize(QtCore.QSize(360, 31))
-        self.comboBox_OpcionesBuscar.setStyleSheet("background-color: rgb(150, 172, 183);\n"
-"font: 13pt \"Times\";\n"
-"color: rgb(255, 255, 255);")
+        self.comboBox_OpcionesBuscar.setGeometry(QtCore.QRect(370, 250, 400, 30))
+        self.comboBox_OpcionesBuscar.setMinimumSize(QtCore.QSize(410, 30))
+        self.comboBox_OpcionesBuscar.setMaximumSize(QtCore.QSize(410, 30))
+        self.comboBox_OpcionesBuscar.setStyleSheet("background-color: #d1d1d5;\n"
+"font: 14pt \"Times\";\n"
+"color: rgb(0, 0, 0);")
         self.comboBox_OpcionesBuscar.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
         self.comboBox_OpcionesBuscar.setMinimumContentsLength(0)
         self.comboBox_OpcionesBuscar.setObjectName("comboBox_OpcionesBuscar")
@@ -138,43 +172,61 @@ class Ui_HomeAdminReporteria(object):
         self.comboBox_OpcionesBuscar.addItem("")
         self.comboBox_OpcionesBuscar.addItem("")
         self.comboBox_OpcionesBuscar.addItem("")
+
+
+
         self.pushButton_ReportarPorFecha = QtWidgets.QPushButton(self.frame)
-        self.pushButton_ReportarPorFecha.setGeometry(QtCore.QRect(430, 180, 80, 31))
+        self.pushButton_ReportarPorFecha.setGeometry(QtCore.QRect(790, 200, 80, 31))
         self.pushButton_ReportarPorFecha.setMinimumSize(QtCore.QSize(80, 31))
         self.pushButton_ReportarPorFecha.setMaximumSize(QtCore.QSize(80, 31))
-        self.pushButton_ReportarPorFecha.setStyleSheet("background-color: rgb(10, 54, 157);\n"
+        self.pushButton_ReportarPorFecha.setStyleSheet("background-color: #0ca692;\n"
 "font: 14pt \"Times\";\n"
 "color: rgb(255, 255, 255);")
         self.pushButton_ReportarPorFecha.setObjectName("pushButton_ReportarPorFecha")
+
+
+
+
         self.label_10 = QtWidgets.QLabel(self.frame)
-        self.label_10.setGeometry(QtCore.QRect(30, 460, 210, 25))
+        self.label_10.setGeometry(QtCore.QRect(690, 40, 210, 25))
         self.label_10.setMinimumSize(QtCore.QSize(210, 25))
         self.label_10.setMaximumSize(QtCore.QSize(210, 25))
-        self.label_10.setStyleSheet("font: 18pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_10.setStyleSheet("font: 22pt \"Times\";\n"
+"color: rgb(255,255,255);\n"
 "")
         self.label_10.setObjectName("label_10")
+
+
+
+
         self.label_11 = QtWidgets.QLabel(self.frame)
-        self.label_11.setGeometry(QtCore.QRect(570, 100, 210, 25))
+        self.label_11.setGeometry(QtCore.QRect(140, 130, 210, 25))
         self.label_11.setMinimumSize(QtCore.QSize(210, 25))
         self.label_11.setMaximumSize(QtCore.QSize(210, 25))
-        self.label_11.setStyleSheet("font: 18pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_11.setStyleSheet("font: 14pt \"Times\";\n"
+"color: #FFFFFF;\n"
 "")
         self.label_11.setObjectName("label_11")
+
+
+
+
         self.label_12 = QtWidgets.QLabel(self.frame)
-        self.label_12.setGeometry(QtCore.QRect(570, 330, 210, 25))
+        self.label_12.setGeometry(QtCore.QRect(140, 340, 210, 25))
         self.label_12.setMinimumSize(QtCore.QSize(210, 25))
         self.label_12.setMaximumSize(QtCore.QSize(210, 25))
-        self.label_12.setStyleSheet("font: 18pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_12.setStyleSheet("font: 14Pt \"Times\";\n"
+"color: #FFFFFF;\n"
 "")
         self.label_12.setObjectName("label_12")
+
+
+
+
         self.label_9.raise_()
         self.label_12.raise_()
         self.label_11.raise_()
         self.label_8.raise_()
-        self.label.raise_()
         self.label_2.raise_()
         self.tableWidget.raise_()
         self.textEdit_NoArtista.raise_()
@@ -194,7 +246,6 @@ class Ui_HomeAdminReporteria(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Sonido Cloud "))
         self.textEdit_NoArtista.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -223,8 +274,8 @@ class Ui_HomeAdminReporteria(object):
         self.pushButton_Reportar.setText(_translate("MainWindow", "Reportar"))
         self.pushButton_Reportar.clicked.connect(self.reportReporteria)
         self.label_10.setText(_translate("MainWindow", "Reportería"))
-        self.label_11.setText(_translate("MainWindow", "Escoja fecha inicial"))
-        self.label_12.setText(_translate("MainWindow", "Escoja fecha final"))
+        self.label_11.setText(_translate("MainWindow", "Fecha Inicial"))
+        self.label_12.setText(_translate("MainWindow", "Fecha Final"))
         self.pushButton_ReportarPorFecha.clicked.connect(self.reportReporteriaFecha)
 
 
