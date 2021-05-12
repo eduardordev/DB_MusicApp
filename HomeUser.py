@@ -33,7 +33,7 @@ class Ui_HomeUser(object):
         self.frame.setObjectName("frame")
 
         self.label_2 = QtWidgets.QLabel(self.frame)
-        self.label_2.setGeometry(QtCore.QRect(100, 20, 100, 100))
+        self.label_2.setGeometry(QtCore.QRect(100, 50, 100, 100))
         self.label_2.setMinimumSize(QtCore.QSize(225, 205))
         self.label_2.setMaximumSize(QtCore.QSize(225, 205))
         self.label_2.setStyleSheet("")
@@ -99,31 +99,14 @@ class Ui_HomeUser(object):
         self.pushButton_Buscar.setObjectName("pushButton_Buscar")
         self.pushButton_Buscar.clicked.connect(self.populateTable)
 
-        self.pushButton_Tienda = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Tienda.setGeometry(QtCore.QRect(20, 220, 114, 32))
-        self.pushButton_Tienda.setMinimumSize(QtCore.QSize(200, 50))
-        self.pushButton_Tienda.setMaximumSize(QtCore.QSize(200, 50))
-        self.pushButton_Tienda.setStyleSheet("background-color: #0ca692;\n"
-"font: 16pt \"Times\";\n"
-"color: rgb(255, 255, 255);")
-        self.pushButton_Tienda.setObjectName("pushButton_Tienda")
-        self.pushButton_MiMusica = QtWidgets.QPushButton(self.frame)
-        self.pushButton_MiMusica.setGeometry(QtCore.QRect(230, 220, 114, 32))
-        self.pushButton_MiMusica.setMinimumSize(QtCore.QSize(200, 50))
-        self.pushButton_MiMusica.setMaximumSize(QtCore.QSize(200, 50))
-        self.pushButton_MiMusica.setStyleSheet("background-color: #0ca692;\n"
-"font: 16pt \"Times\";\n"
-"color: rgb(255, 255, 255);")
-        self.pushButton_MiMusica.setObjectName("pushButton_Mongo")
+        
+        
         self.label_2.raise_()
         self.tableWidget.raise_()
         self.pushButton_Exit.raise_()
         self.textEdit_UserBuscar.raise_()
         self.comboBox_OpcionesBuscar.raise_()
-        self.pushButton_Tienda.raise_()
-        self.pushButton_Tienda.clicked.connect(self.openTienda)
-        self.pushButton_MiMusica.raise_()
-        self.pushButton_MiMusica.clicked.connect(self.openMiMusica)
+        
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -147,8 +130,6 @@ class Ui_HomeUser(object):
         self.comboBox_OpcionesBuscar.setItemText(3, _translate("MainWindow", "Álbum"))
         self.comboBox_OpcionesBuscar.setItemText(4, _translate("MainWindow", "Canción"))
         self.pushButton_Buscar.setText(_translate("MainWindow", "Buscar"))
-        self.pushButton_Tienda.setText(_translate("MainWindow", "Tienda"))
-        self.pushButton_MiMusica.setText(_translate("MainWindow", "Mi Música"))
 
     def openPopUpError(self):
         msgError = QMessageBox()
