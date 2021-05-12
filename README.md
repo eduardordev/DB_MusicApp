@@ -12,9 +12,6 @@ $ pip install pyqt5
 $ pip install fpdf
 ```
 ```bash
-$ pip install pymongo
-```
-```bash
 $ pip install psycopg2
 ```
 En el remoto caso que psicogp2 no funcione, instalar:
@@ -31,10 +28,9 @@ Para que el sistema se concecte correctamente con la base de datos, es important
 host = 127.0.0.1
 database= testdb
 user= postgres
-password= 12345678
+password= su_contrasena_pg
 port= 5432
 ```
-se conectará a la base de datos ```testdb``` en el host ```127.0.01```, puerto ```5432``` como el usuario ```postgres``` y la contraseña ```12345678```.
 
 
 ### Finalmente
