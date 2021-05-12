@@ -1,6 +1,7 @@
 
-proyecto1.backup
-base_de_datos.ini
+*.backup
+*.ini
 *.pyc
 *.csv
 *.pdf
+
