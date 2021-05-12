@@ -1,39 +1,20 @@
-﻿/*******************************************************************************
-   Create Tables
-********************************************************************************/
-DROP TABLE IF EXISTS Artist CASCADE;
-DROP TABLE IF EXISTS Album CASCADE;
-DROP TABLE IF EXISTS Employee CASCADE;
-DROP TABLE IF EXISTS Customer CASCADE;
-DROP TABLE IF EXISTS Genre CASCADE;
-DROP TABLE IF EXISTS user_client CASCADE;
-DROP TABLE IF EXISTS Invoice CASCADE;
-DROP TABLE IF EXISTS MediaType CASCADE;
-DROP TABLE IF EXISTS Track CASCADE;
-DROP TABLE IF EXISTS Carrito CASCADE;
-DROP TABLE IF EXISTS InvoiceLine CASCADE;
-DROP TABLE IF EXISTS Playlist CASCADE;
-DROP TABLE IF EXISTS PlaylistTrack CASCADE;
-DROP TABLE IF EXISTS reproducciones CASCADE;
-
-
-CREATE TABLE Artist
+﻿CREATE TABLE Artist
 (
     ArtistId INT NOT NULL,
-    Name VARCHAR(120),
+    Name VARCHAR(115),
     customerId INT DEFAULT 0,
-    last_modified_by VARCHAR(50) DEFAULT NULL,
-    deleted_by VARCHAR(50) DEFAULT NULL,
+    last_modified_by VARCHAR(45) DEFAULT NULL,
+    deleted_by VARCHAR(45) DEFAULT NULL,
     CONSTRAINT PK_Artist PRIMARY KEY (ArtistId)
 );
 
 CREATE TABLE Album
 (
     AlbumId INT NOT NULL,
-    Title VARCHAR(160) NOT NULL,
+    Title VARCHAR(142) NOT NULL,
     ArtistId INT NOT NULL,
-    last_modified_by VARCHAR(50) DEFAULT NULL,
-    deleted_by VARCHAR(50) DEFAULT NULL,
+    last_modified_by VARCHAR(45) DEFAULT NULL,
+    deleted_by VARCHAR(45) DEFAULT NULL,
     CONSTRAINT PK_Album PRIMARY KEY (AlbumId),
     FOREIGN KEY (ArtistId) REFERENCES Artist (ArtistId) ON DELETE CASCADE ON UPDATE NO ACTION
 );
@@ -41,22 +22,22 @@ CREATE TABLE Album
 CREATE TABLE Employee
 (
     EmployeeId INT NOT NULL,
-    LastName VARCHAR(20) NOT NULL,
-    FirstName VARCHAR(20) NOT NULL,
+    LastName VARCHAR(15) NOT NULL,
+    FirstName VARCHAR(15) NOT NULL,
     Title VARCHAR(30),
     ReportsTo INT,
     BirthDate TIMESTAMP,
     HireDate TIMESTAMP,
-    Address VARCHAR(70),
-    City VARCHAR(40),
-    State VARCHAR(40),
-    Country VARCHAR(40),
+    Address VARCHAR(64),
+    City VARCHAR(36),
+    State VARCHAR(32),
+    Country VARCHAR(35),
     PostalCode VARCHAR(10),
     Phone VARCHAR(24),
     Fax VARCHAR(24),
     Email VARCHAR(60),
     username VARCHAR(40),
-    Password VARCHAR(40),
+    Password VARCHAR(41),
     Usertype INT DEFAULT 2,
     CONSTRAINT PK_Employee PRIMARY KEY (EmployeeId),
     FOREIGN KEY (ReportsTo) REFERENCES Employee (EmployeeId) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -65,17 +46,17 @@ CREATE TABLE Employee
 CREATE TABLE Customer
 (
     CustomerId INT NOT NULL,
-    FirstName VARCHAR(40) NOT NULL,
-    LastName VARCHAR(20) NOT NULL,
-    Company VARCHAR(80),
-    Address VARCHAR(70),
-    City VARCHAR(40),
-    State VARCHAR(40),
-    Country VARCHAR(40),
-    PostalCode VARCHAR(10),
-    Phone VARCHAR(24),
-    Fax VARCHAR(24),
-    Email VARCHAR(60) NOT NULL,
+    FirstName VARCHAR(35) NOT NULL,
+    LastName VARCHAR(21) NOT NULL,
+    Company VARCHAR(74),
+    Address VARCHAR(68),
+    City VARCHAR(34),
+    State VARCHAR(37),
+    Country VARCHAR(35),
+    PostalCode VARCHAR(11),
+    Phone VARCHAR(25),
+    Fax VARCHAR(25),
+    Email VARCHAR(55) NOT NULL,
     SupportRepId INT,
     CONSTRAINT PK_Customer PRIMARY KEY (CustomerId),
     FOREIGN KEY (SupportRepId) REFERENCES Employee (EmployeeId) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -85,10 +66,10 @@ CREATE TABLE Customer
 CREATE TABLE user_client
 (  
     clientid INT NOT NULL ,
-    username VARCHAR(40) NOT NULL UNIQUE,
-    password VARCHAR(40) NOT NULL ,
+    username VARCHAR(39) NOT NULL UNIQUE,
+    password VARCHAR(39) NOT NULL ,
     usertype INT DEFAULT 2,
-    suscripcion VARCHAR(40) DEFAULT 'Anual',
+    suscripcion VARCHAR(39) DEFAULT 'Anual',
     customerId INT DEFAULT NULL,
     CONSTRAINT PK_user_client PRIMARY KEY(clientid),
     FOREIGN KEY (customerId) REFERENCES Customer(CustomerId) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -97,7 +78,7 @@ CREATE TABLE user_client
 CREATE TABLE Genre
 (
     GenreId INT NOT NULL,
-    Name VARCHAR(120),
+    Name VARCHAR(111),
     CONSTRAINT PK_Genre PRIMARY KEY (GenreId)
 );
 
@@ -107,11 +88,11 @@ CREATE TABLE Invoice
     InvoiceId INT NOT NULL,
     CustomerId INT NOT NULL,
     InvoiceDate TIMESTAMP NOT NULL,
-    BillingAddress VARCHAR(70),
-    BillingCity VARCHAR(40),
-    BillingState VARCHAR(40),
-    BillingCountry VARCHAR(40),
-    BillingPostalCode VARCHAR(10),
+    BillingAddress VARCHAR(68),
+    BillingCity VARCHAR(39),
+    BillingState VARCHAR(39),
+    BillingCountry VARCHAR(39),
+    BillingPostalCode VARCHAR(11),
     Total NUMERIC(10,2) NOT NULL,
     CONSTRAINT PK_Invoice PRIMARY KEY (InvoiceId),
     FOREIGN KEY (CustomerId) REFERENCES user_client (clientid) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -121,7 +102,7 @@ CREATE TABLE Invoice
 CREATE TABLE MediaType
 (
     MediaTypeId INT NOT NULL,
-    Name VARCHAR(120),
+    Name VARCHAR(111),
     CONSTRAINT PK_MediaType PRIMARY KEY (MediaTypeId)
 );
 
@@ -129,17 +110,17 @@ CREATE TABLE MediaType
 CREATE TABLE Track
 (
     TrackId INT NOT NULL,
-    Name VARCHAR(200) NOT NULL,
+    Name VARCHAR(190) NOT NULL,
     AlbumId INT,
     MediaTypeId INT NOT NULL,
     GenreId INT,
-    Composer VARCHAR(220),
+    Composer VARCHAR(200),
     Milliseconds INT NOT NULL,
     Bytes INT,
     UnitPrice NUMERIC(10,2) NOT NULL,
     isActive BOOLEAN NOT NULL DEFAULT true,
-    last_modified_by VARCHAR(50) DEFAULT NULL,
-    deleted_by VARCHAR(50) DEFAULT NULL,
+    last_modified_by VARCHAR(49) DEFAULT NULL,
+    deleted_by VARCHAR(49) DEFAULT NULL,
     CONSTRAINT PK_Track PRIMARY KEY (TrackId),
     FOREIGN KEY (AlbumId) REFERENCES Album (AlbumId) ON DELETE CASCADE ON UPDATE NO ACTION,
     FOREIGN KEY (GenreId) REFERENCES Genre (GenreId) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -151,7 +132,7 @@ CREATE TABLE Carrito
 (
     clientId INT NOT NULL,
     trackId INT NOT NULL,
-    trackName VARCHAR(200) NOT NULL,
+    trackName VARCHAR(190) NOT NULL,
     comprado BOOLEAN DEFAULT FALSE,
     CONSTRAINT PK_Carrito PRIMARY KEY (clientId, trackId),
     FOREIGN KEY (clientid) REFERENCES  user_client (clientid) ON DELETE CASCADE,
@@ -174,9 +155,9 @@ CREATE TABLE InvoiceLine
 CREATE TABLE Playlist
 (
     PlaylistId INT NOT NULL,
-    Name VARCHAR(120),
-    last_modified_by VARCHAR(50) DEFAULT NULL,
-    deleted_by VARCHAR(50) DEFAULT NULL,
+    Name VARCHAR(111),
+    last_modified_by VARCHAR(49) DEFAULT NULL,
+    deleted_by VARCHAR(49) DEFAULT NULL,
     CONSTRAINT PK_Playlist PRIMARY KEY (PlaylistId)
 );
 
@@ -195,43 +176,23 @@ CREATE TABLE PlaylistTrack
 CREATE TABLE reproducciones
 (
     clientid INT,
-    trackName VARCHAR (200),
+    trackName VARCHAR (190),
     fecha timestamp with time zone default current_timestamp,
     FOREIGN KEY (clientid) REFERENCES  user_client (clientid) ON DELETE CASCADE
 );
 
-
-
-
-/*******************************************************************************
-   Create Primary Key Unique Indexes
-********************************************************************************/
-DROP INDEX IF EXISTS IFK_AlbumArtistId;
 CREATE INDEX IFK_AlbumArtistId ON Album (ArtistId);
-DROP INDEX IF EXISTS IFK_CustomerSupportRepId;
 CREATE INDEX IFK_CustomerSupportRepId ON Customer (SupportRepId);
-DROP INDEX IF EXISTS IFK_EmployeeReportsTo;
 CREATE INDEX IFK_EmployeeReportsTo ON Employee (ReportsTo);
-DROP INDEX IF EXISTS IFK_InvoiceCustomerId;
 CREATE INDEX IFK_InvoiceCustomerId ON Invoice (CustomerId);
-DROP INDEX IF EXISTS IFK_InvoiceLineInvoiceId;
 CREATE INDEX IFK_InvoiceLineInvoiceId ON InvoiceLine (InvoiceId);
-DROP INDEX IF EXISTS IFK_InvoiceLineTrackId;
 CREATE INDEX IFK_InvoiceLineTrackId ON InvoiceLine (TrackId);
-DROP INDEX IF EXISTS IFK_PlaylistTrackTrackId;
 CREATE INDEX IFK_PlaylistTrackTrackId ON PlaylistTrack (TrackId);
-DROP INDEX IF EXISTS IFK_TrackAlbumId;
 CREATE INDEX IFK_TrackAlbumId ON Track (AlbumId);
-DROP INDEX IF EXISTS IFK_TrackGenreId;
 CREATE INDEX IFK_TrackGenreId ON Track (GenreId);
-DROP INDEX IF EXISTS IFK_TrackMediaTypeId;
 CREATE INDEX IFK_TrackMediaTypeId ON Track (MediaTypeId);
-DROP INDEX IF EXISTS IFK_UserclientId;
 CREATE INDEX IFK_UserclientId ON user_client (clientid);
 
-/*******************************************************************************
-   Populate Tables
-********************************************************************************/
 INSERT INTO Genre (GenreId, Name) VALUES (1,'Rock');
 INSERT INTO Genre (GenreId, Name) VALUES (2,'Jazz');
 INSERT INTO Genre (GenreId, Name) VALUES (3,'Metal');
@@ -539,9 +500,9 @@ INSERT INTO Artist (ArtistId, Name) VALUES (272,'Emerson String Quartet');
 INSERT INTO Artist (ArtistId, Name) VALUES (273,'C. Monteverdi, Nigel Rogers - Chiaroscuro; London Baroque; London Cornett & Sackbu');
 INSERT INTO Artist (ArtistId, Name) VALUES (274,'Nash Ensemble');
 INSERT INTO Artist (ArtistId, Name) VALUES (275,'Philip Glass Ensemble');
-INSERT INTO Artist (ArtistId, Name, customerId) VALUES (276, 'luisg95', 1);
-INSERT INTO Artist (ArtistId, Name, customerId) VALUES (277, 'tst0',2);
-INSERT INTO Artist (ArtistId, Name, customerId) VALUES (278, 'tst2',4);
+INSERT INTO Artist (ArtistId, Name, customerId) VALUES (276, 'Pedrito', 1);
+INSERT INTO Artist (ArtistId, Name, customerId) VALUES (277, 'Juanita',2);
+INSERT INTO Artist (ArtistId, Name, customerId) VALUES (278, 'Maria',4);
 
 INSERT INTO Album (AlbumId, Title, ArtistId) VALUES (1,'For Those About To Rock We Salute You', 1);
 INSERT INTO Album (AlbumId, Title, ArtistId) VALUES (2,'Balls to the Wall', 2);
@@ -4400,19 +4361,19 @@ INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milli
 INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES (3505,'LuiSong', 348, 2, 10,'Luisg', 456505, 3335764, 0.99);
 INSERT INTO Track (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES (3506,'cancionTsT0', 349, 2, 10,'tst0', 206479, 2365664, 0.99);
 
-INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (1,'Adams','Andrew','General Manager', '1962/2/18', '2002/8/14','11120 Jasper Ave NW','Edmonton','AB','Canada','T5K 2N1','+1 (780) 428-9482','+1 (780) 428-3457','andrew@chinookcorp.com', 'user0', 'test0',1);
-INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (2,'Edwards','Nancy','Sales Manager', 1, '1958/12/8', '2002/5/1','825 8 Ave SW','Calgary','AB','Canada','T2P 2T3','+1 (403) 262-3443','+1 (403) 262-3322','nancy@chinookcorp.com', 'user1', 'test0',0);
-INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (3,'Peacock','Jane','Sales Support Agent', 2, '1973/8/29', '2002/4/1','1111 6 Ave SW','Calgary','AB','Canada','T2P 5M5','+1 (403) 262-3443','+1 (403) 262-6712','jane@chinookcorp.com', 'user2', 'test0',0);
-INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (4,'Park','Margaret','Sales Support Agent', 2, '1947/9/19', '2003/5/3','683 10 Street SW','Calgary','AB','Canada','T2P 5G3','+1 (403) 263-4423','+1 (403) 263-4289','margaret@chinookcorp.com', 'user3', 'test0',0);
-INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (5,'Johnson','Steve','Sales Support Agent', 2, '1965/3/3', '2003/10/17','7727B 41 Ave','Calgary','AB','Canada','T3B 1Y7','1 (780) 836-9987','1 (780) 836-9543','steve@chinookcorp.com', 'user0', 'test4',0);
-INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (6,'Mitchell','Michael','IT Manager', 1, '1973/7/1', '2003/10/17','5827 Bowness Road NW','Calgary','AB','Canada','T3B 0C5','+1 (403) 246-9887','+1 (403) 246-9899','michael@chinookcorp.com', 'user5', 'test0',0);
-INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (7,'King','Robert','IT Staff', 6, '1970/5/29', '2004/1/2','590 Columbia Boulevard West','Lethbridge','AB','Canada','T1K 5N8','+1 (403) 456-9986','+1 (403) 456-8485','robert@chinookcorp.com', 'user6', 'test0',0);
-INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (8,'Callahan','Laura','IT Staff', 6, '1968/1/9', '2004/3/4','923 7 ST NW','Lethbridge','AB','Canada','T1H 1Y8','+1 (403) 467-3351','+1 (403) 467-8772','laura@chinookcorp.com','user7', 'test0', 0);
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (1,'Venegas','Randy','General Manager', '1999/4/19', '2010/8/14','Zona1','Guatemala','AB','Guatemala',' a','+1 (502) 5782-6421','+1 (520) 5782-6421','Randy@gmail.com', 'Randy', 'admin',1);
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (2,'Ramirez','Eduardo','Sales Manager', 1, '2000/12/8', '2009/5/1','111 4 Ave SW','Brooklyn','AB','US','T2P 2T3','+1 (722) 262-3443','+1 (722) 262-3322','Edu@gmail.com', 'Eduardo', 'edu1',0);
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (3,'Robinson','Robin','Sales Support Agent', 2, '1973/8/29', '2002/4/1','1111 6 Ave SW','Calgary','AB','Canada','T2P 5M5','+1 (403) 262-3443','+1 (403) 262-6712','Robinson@gmail.com', 'Robin', 'Robin22',0);
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (4,'Siemens','Katrina','Sales Support Agent', 2, '1947/9/19', '2003/5/3','683 10 Street SW','Calgary','AB','Canada','T2P 5G3','+1 (403) 263-4423','+1 (403) 263-4289','Katrina@gmail.com', 'Katrina', 'katrina52',0);
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (5,'Byers','Mark','Sales Support Agent', 2, '1965/3/3', '2003/10/17','7727B 41 Ave','Calgary','AB','Canada','T3B 1Y7','1 (780) 836-9987','1 (780) 836-9543','mark@gmail.com', 'mark', 'mark87',0);
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (6,'Quedada','Alfredo','IT Manager', 1, '1973/7/1', '2003/10/17','5827 Bowness Road NW','Calgary','AB','Canada','T3B 0C5','+1 (403) 246-9887','+1 (403) 246-9899','Alfred@gmail.com', 'Alfredo', 'alf1',0);
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (7,'Hawks','James','IT Staff', 6, '1970/5/29', '2004/1/2','590 Columbia Boulevard West','Lethbridge','AB','Canada','T1K 5N8','+1 (403) 456-9986','+1 (403) 456-8485','james@gmail.com', 'user6', 'test0',0);
+INSERT INTO Employee (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email, Username, Password, Usertype) VALUES (8,'Yukiko','Smith','IT Staff', 6, '1968/1/9', '2004/3/4','923 7 ST NW','Lethbridge','AB','Canada','T1H 1Y8','+1 (403) 467-3351','+1 (403) 467-8772','Smith@gmail.com','user7', 'test0', 0);
 
-INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (1,'Luís','Gonçalves','Embraer - Empresa Brasileira de Aeronáutica S.A.','Av. Brigadeiro Faria Lima, 2170','São José dos Campos','SP','Brazil','12227-000','+55 (12) 3923-5555','+55 (12) 3923-5566','luisg@embraer.com.br', 3);
-INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, SupportRepId) VALUES (2,'Leonie','Köhler','Theodor-Heuss-Straße 34','Stuttgart','Germany','70174','+49 0711 2842222','leonekohler@surfeu.de', 5);
+INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (1,'Raul','Cary','Voeliz - Empresa  de Automotriz S.A.','Av. Brigadeiro Faria Lima, 2170','Guatemala','SP','Guatemala','12227-000','+55 (12) 3923-5555','+55 (12) 3923-5566','Raul@gmail.com', 3);
+INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, SupportRepId) VALUES (2,'Leonie','Köhler','Theodor-Heuss-Straße 34','Stuttgart','Germany','70174','+49 0711 2842222','leonekohler@gmail.com', 5);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, State, Country, PostalCode, Phone, Email, SupportRepId) VALUES (3,'François','Tremblay','1498 rue Bélanger','Montréal','QC','Canada','H2G 1A7','+1 (514) 721-4711','ftremblay@gmail.com', 3);
-INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, SupportRepId) VALUES (4,'Bjørn','Hansen','Ullevålsveien 14','Oslo','Norway','0171','+47 22 44 22 22','bjorn.hansen@yahoo.no', 4);
+INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, SupportRepId) VALUES (4,'Bjørn','Hansen','Ullevålsveien 14','Oslo','Norway','0171','+47 22 44 22 22','bjorn.hansen@gmail.com', 4);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (5,'František','Wichterlová','JetBrains s.r.o.','Klanova 9/506','Prague','Czech Republic','14700','+420 2 4172 5555','+420 2 4172 5555','frantisekw@jetbrains.com', 4);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, SupportRepId) VALUES (6,'Helena','Holý','Rilská 3174/6','Prague','Czech Republic','14300','+420 2 4177 0449','hholy@gmail.com', 5);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, SupportRepId) VALUES (7,'Astrid','Gruber','Rotenturmstraße 4, 1010 Innere Stadt','Vienne','Austria','1010','+43 01 5134505','astrid.gruber@apple.at', 5);
@@ -4424,7 +4385,7 @@ INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, S
 INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (13,'Fernanda','Ramos','Qe 7 Bloco G','Brasília','DF','Brazil','71020-677','+55 (61) 3363-5547','+55 (61) 3363-7855','fernadaramos4@uol.com.br', 4);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (14,'Mark','Philips','Telus','8210 111 ST NW','Edmonton','AB','Canada','T6G 2C7','+1 (780) 434-4554','+1 (780) 434-5565','mphilips12@shaw.ca', 5);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (15,'Jennifer','Peterson','Rogers Canada','700 W Pender Street','Vancouver','BC','Canada','V6C 1G8','+1 (604) 688-2255','+1 (604) 688-8756','jenniferp@rogers.ca', 3);
-INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (16,'Frank','Harris','Google Inc.','1600 Amphitheatre Parkway','Mountain View','CA','USA','94043-1351','+1 (650) 253-0000','+1 (650) 253-0000','fharris@google.com', 4);
+INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (16,'Peter','Harris','Google Inc.','1600 Amphitheatre Parkway','Mountain View','CA','USA','94043-1351','+1 (650) 253-0000','+1 (650) 253-0000','fharris@google.com', 4);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (17,'Jack','Smith','Microsoft Corporation','1 Microsoft Way','Redmond','WA','USA','98052-8300','+1 (425) 882-8080','+1 (425) 882-8081','jacksmith@microsoft.com', 5);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (18,'Michelle','Brooks','627 Broadway','New York','NY','USA','10012-2612','+1 (212) 221-3546','+1 (212) 221-4679','michelleb@aol.com', 3);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (19,'Tim','Goyer','Apple Inc.','1 Infinite Loop','Cupertino','CA','USA','95014','+1 (408) 996-1010','+1 (408) 996-1011','tgoyer@apple.com', 3);
@@ -4469,12 +4430,67 @@ INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, P
 INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, SupportRepId) VALUES (58,'Manoj','Pareek','12,Community Centre','Delhi','India','110017','+91 0124 39883988','manoj.pareek@rediff.com', 3);
 INSERT INTO Customer (CustomerId, FirstName, LastName, Address, City, Country, PostalCode, Phone, Email, SupportRepId) VALUES (59,'Puja','Srivastava','3,Raj Bhavan Road','Bangalore','India','560001','+91 080 22289999','puja_srivastava@yahoo.in', 3);
 
-INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (1, 'prueba', 'contrasena', 0, 'Anual', 1);
-INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (2, 'prueba2', 'contrasena', 0,'Anual', 2);
-INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (3, 'eduardo', '12345', 2,'Anual', 3);
-INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (4, 'randy', '12345', 1,'Anual', 4);
-INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (5, 'alfredo', '12345', 2,'Anual', 5);
-
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (1, 'Michelle', 'Sanabria', 0, 'Anual', 1);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (2, 'Leroy', 'qwerty', 0,'Anual', 2);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (3, 'Cheryl', 'Aucoin', 2,'Anual', 3);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (4, 'Miguel', 'Hall', 1,'Anual', 4);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (5, 'Rochelle', 'Christensen', 2,'Anual', 5);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (6, 'Holmes', 'Glenda', 2,'Anual', 6);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (7, 'Charlie', 'Gates', 2,'Anual', 7);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (8, 'Loren', 'Dunbar', 2,'Anual', 8);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (9, 'Yolanda', 'Nester', 2,'Anual', 9);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (10, 'Wenndy', 'Bingham', 2,'Anual', 10);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (11, 'Joy', 'Watson', 2,'Anual', 11);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (12, 'Dorothy', 'Griffin', 2,'Anual', 12);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (13, 'Mary', 'Lewis', 2,'Anual', 13);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (14, 'Kyle', 'Newton', 2,'Anual', 14);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (15, 'Lisa', 'Hughes', 2,'Anual', 15);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (16, 'Janice', 'Lyon', 2,'Anual', 16);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (17, 'Joseph', 'Blazek', 2,'Anual', 17);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (18, 'Tommy', 'Iverson', 2,'Anual', 18);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (19, 'Erin', 'Hearne', 2,'Anual', 19);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (20, 'Charlees', 'Reeilly', 2,'Anual', 20);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (21, 'Michelel', 'Cunningham', 2,'Anual', 21);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (22, 'Ross', 'You', 2,'Anual', 22);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (23, 'Bobbye', 'Taylor', 2,'Anual', 23);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (24, 'Tommie', 'Cobbs', 2,'Anual', 24);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (25, 'Harry', 'Garcia', 2,'Anual', 25);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (26, 'Danny', 'Walker', 2,'Anual', 26);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (27, 'Louise', 'Rodriguez', 2,'Anual', 27);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (28, 'Karen', 'Jones', 2,'Anual', 28);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (29, 'William', 'Perry', 2,'Anual', 29);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (30, 'Esther', 'Gomez', 2,'Anual', 30);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (31, 'Nancy', 'Walker', 2,'Anual', 31);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (32, 'James', 'Laporte', 2,'Anual', 32);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (33, 'Amanda', 'Kessler', 2,'Anual', 33);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (34, 'Janet', 'Mercado', 2,'Anual', 34);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (35, 'Roger', 'Bengtson', 2,'Anual', 35);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (36, 'Charles', 'McKenna', 2,'Anual', 36);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (37, 'Daniel', 'Ponce', 2,'Anual', 37);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (38, 'Jamess', 'McCain', 2,'Anual', 38);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (39, 'Adam', 'Day', 2,'Anual', 39);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (40, 'Danielle', 'Hitt', 2,'Anual', 40);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (41, 'Thomas', 'Barnes', 2,'Anual', 41);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (42, 'Gary', 'Stallworth', 2,'Anual', 42);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (43, 'Sam', 'Crump', 2,'Anual', 43);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (44, 'Kristina', 'Haigler', 2,'Anual', 44);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (45, 'Joey', 'Lopez', 2,'Anual', 45);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (46, 'Ida', 'Goldstein', 2,'Anual', 46);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (47, 'Carl', 'Walker', 2,'Anual', 47);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (48, 'Letha', 'Kennedy', 2,'Anual', 48);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (49, 'Wendy', 'Christensen', 2,'Anual', 49);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (50, 'Frances', 'Gallegos', 2,'Anual', 50);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (51, 'Irene', 'Meeks', 2,'Anual', 51);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (52, 'Jeremy', 'Barton', 2,'Anual', 52);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (53, 'Tina', 'Klein', 2,'Anual', 53);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (54, 'Terrance', 'Lavelle', 2,'Anual', 54);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (55, 'Evelyn', 'Johnson', 2,'Anual', 55);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (56, 'Christopher', 'Peterson', 2,'Anual', 56);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (57, 'Geraldine', 'Emanuel', 2,'Anual', 57);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (58, 'Jesus', 'Schwenk', 2,'Anual', 58);
+INSERT INTO user_client (clientid, username, password, usertype, suscripcion, customerId) VALUES (59, 'Rosie', 'Sullivan', 2,'Anual', 59);
+INSERT INTO user_client (clientid, username, password, usertype) VALUES (60, 'Wesley', 'Hermanson', 0);
+INSERT INTO user_client (clientid, username, password, usertype) VALUES (61, 'Shaneka', 'Fehr', 0);
 
 
 
@@ -7116,7 +7132,7 @@ INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity)
 INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2223, 410, 3025, 0.99, 1);
 INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2224, 410, 3031, 0.99, 1);
 INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2225, 410, 3037, 0.99, 1);
-INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2226, 411, 3046, 0.99, 1);
+INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2226, 411, 3046, 4.99, 1);
 INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2227, 411, 3055, 0.99, 1);
 INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2228, 411, 3064, 0.99, 1);
 INSERT INTO InvoiceLine (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2229, 411, 3073, 0.99, 1);
@@ -15868,58 +15884,56 @@ INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (17, 3290);
 INSERT INTO PlaylistTrack (PlaylistId, TrackId) VALUES (18, 597);
 
 
-insert into reproducciones (clientid, trackname, fecha) values (61, 'For Those About To Rock (We Salute You)', '2020-06-01 23:29:12');
-insert into reproducciones (clientid, trackname, fecha) values (61, 'Somebody To Love', '2020-06-01 23:29:28');
-insert into reproducciones (clientid, trackname, fecha) values (61, 'Let''s Get It Up', '2020-06-01 23:29:37');
-insert into reproducciones (clientid, trackname, fecha) values (61, 'Radio GA GA', '2020-06-01 23:29:42');
-insert into reproducciones (clientid, trackname, fecha) values (61, 'We Are The Champions', '2020-06-01 23:29:47');
-insert into reproducciones (clientid, trackname, fecha) values (61, 'Radio GA GA', '2020-06-01 23:30:06');
+insert into reproducciones (clientid, trackname, fecha) values (61, 'Breaking The Rules', '2020-06-01 23:29:12');
+insert into reproducciones (clientid, trackname, fecha) values (61, 'Play The Game', '2020-06-01 23:29:28');
+insert into reproducciones (clientid, trackname, fecha) values (61, 'Inject The Venom', '2020-06-01 23:29:37');
+insert into reproducciones (clientid, trackname, fecha) values (61, 'Evil Walks', '2020-06-01 23:29:42');
+insert into reproducciones (clientid, trackname, fecha) values (61, 'Night Of The Long Knives', '2020-06-01 23:29:47');
+insert into reproducciones (clientid, trackname, fecha) values (61, 'Rag Doll', '2020-06-01 23:30:06');
 
 
 
-/*******************************************************************************
-   Logbook related Stuff
-********************************************************************************/
-DROP INDEX IF EXISTS IFK_Logbook;
-CREATE INDEX IFK_Logbook ON logbook (username);
 
-DROP TABLE IF EXISTS logbook;
+
+
+
+
 CREATE TABLE logbook(
-	username VARCHAR(40) REFERENCES user_client(username),
-	typeOfModification VARCHAR(40),
-	tableModified VARCHAR(40),
+	username VARCHAR(50) REFERENCES user_client(username),
+	typeOfModification VARCHAR(50),
+	tableModified VARCHAR(50),
 	itemModified INT,
 	newData text,
 	dateModified DATE DEFAULT CURRENT_DATE
 );
-
+CREATE INDEX IFK_Logbook ON logbook (username);
 INSERT INTO logbook (username, typeOfModification, tableModified, itemModified, dateModified)
 VALUES 
-    ('luisg95', 'ADD' , 'track' , 1 , '2020/5/1' ),
-    ('luisg95', 'ADD' , 'track' , 2 , '2020/5/2' ),
-    ('luisg95', 'ADD' , 'track' , 3 , '2020/5/3' ),
-    ('luisg95', 'ADD' , 'track' , 4 , '2020/5/4' ),
-    ('luisg95', 'ADD' , 'track' , 5 , '2020/5/5' ),
-    ('luisg95', 'ADD' , 'track' , 6 , '2020/5/6' ),
-    ('luisg95', 'ADD' , 'track' , 7 , '2020/5/7' ),
-    ('luisg95', 'ADD' , 'track' , 8 , '2020/5/8' ),
-    ('luisg95', 'ADD' , 'track' , 9 , '2020/5/9' ),
-    ('luisg95', 'ADD' , 'track' , 10 , '2020/5/10' ),
-    ('luisg95', 'ADD' , 'track' , 11 , '2020/5/11' ),
-    ('luisg95', 'ADD' , 'track' , 12 , '2020/5/12' ),
-    ('luisg95', 'ADD' , 'track' , 13 , '2020/5/13' ),
-    ('luisg95', 'ADD' , 'track' , 14 , '2020/5/14' ),
-    ('luisg95', 'ADD' , 'track' , 15 , '2020/5/15' ),
-    ('luisg95', 'ADD' , 'track' , 16 , '2020/5/16' ),
-    ('luisg95', 'ADD' , 'track' , 17 , '2020/5/17' ),
-    ('luisg95', 'ADD' , 'track' , 18 , '2020/5/18' ),
-    ('luisg95', 'ADD' , 'track' , 19 , '2020/5/19' ),
-    ('luisg95', 'ADD' , 'track' , 20 , '2020/5/20' ),
-    ('luisg95', 'ADD' , 'track' , 3350 , '2020/5/21' ),
-    ('luisg95', 'ADD' , 'track' , 3142 , '2020/5/22' ),
-    ('luisg95', 'ADD' , 'track' , 2814 , '2020/5/22' ),
-    ('luisg95', 'ADD' , 'track' , 2586 , '2020/5/21' ),
-    ('luisg95', 'ADD' , 'track' , 2586 , '2020/5/21' );
+    ('Holmes', 'ADD' , 'track' , 85 , '2020/5/1' ),
+    ('Leroy', 'ADD' , 'track' , 47 , '2020/5/2' ),
+    ('Miguel', 'ADD' , 'track' , 72 , '2020/5/3' ),
+    ('Rochelle', 'ADD' , 'track' , 91 , '2020/5/4' ),
+    ('Charlie', 'ADD' , 'track' , 50 , '2020/5/5' ),
+    ('Loren', 'ADD' , 'track' , 41 , '2020/5/6' ),
+    ('Yolanda', 'ADD' , 'track' , 25 , '2020/5/7' ),
+    ('Wenndy', 'ADD' , 'track' , 77 , '2020/5/8' ),
+    ('Joy', 'ADD' , 'track' , 84 , '2020/5/9' ),
+    ('Dorothy', 'ADD' , 'track' , 32 , '2020/5/10' ),
+    ('Mary', 'ADD' , 'track' , 35 , '2020/5/11' ),
+    ('Kyle', 'ADD' , 'track' , 42 , '2020/5/12' ),
+    ('Lisa', 'ADD' , 'track' , 48 , '2020/5/13' ),
+    ('Janice', 'ADD' , 'track' , 55 , '2020/5/14' ),
+    ('Joseph', 'ADD' , 'track' , 15 , '2020/5/15' ),
+    ('Tommy', 'ADD' , 'track' , 16 , '2020/5/16' ),
+    ('Erin', 'ADD' , 'track' , 17 , '2020/5/17' ),
+    ('Charlees', 'ADD' , 'track' , 18 , '2020/5/18' ),
+    ('Ross', 'ADD' , 'track' , 19 , '2020/5/19' ),
+    ('Bobbye', 'ADD' , 'track' , 20 , '2020/5/20' ),
+    ('Tommie', 'ADD' , 'track' , 3350 , '2020/5/21' ),
+    ('Harry', 'ADD' , 'track' , 3142 , '2020/5/22' ),
+    ('Danny', 'ADD' , 'track' , 2814 , '2020/5/22' ),
+    ('Louise', 'ADD' , 'track' , 2586 , '2020/5/21' ),
+    ('Michelle', 'ADD' , 'track' , 2586 , '2020/5/21' );
 
 CREATE OR REPLACE FUNCTION save_modification()
 RETURNS trigger as 
@@ -15983,10 +15997,7 @@ ON playlist
 FOR EACH ROW
 EXECUTE PROCEDURE save_modification();
 
-/*******************************************************************************
-   Reporteria por fechas
-********************************************************************************/
-drop function if exists ventas_por_semana;
+
 create or replace function ventas_por_semana(inicio timestamp without time zone, fin timestamp without time zone)
 returns table (
 	total_por_semana0 bigint 
@@ -16007,10 +16018,10 @@ language 'plpgsql';
 
 
 
-drop function if exists artistas_ventas_por_fechas;
+
 create or replace function artistas_ventas_por_fechas(inicio timestamp without time zone, fin timestamp without time zone, numero integer)
 returns table(
-	nombre character varying(120),
+	nombre character varying(200),
 	total_ventas bigint
 ) as $$
 begin
@@ -16033,7 +16044,7 @@ language 'plpgsql';
 
 
 
-drop function if exists ventas_por_genero; 
+
 create or replace function ventas_por_genero(inicio timestamp without time zone, fin timestamp without time zone)
 returns table(
 	nombre character varying(120),
@@ -16057,7 +16068,7 @@ language 'plpgsql';
 --select * from ventas_por_genero('2009-01-01', '2009-02-28')
 
 
-drop function if exists canciones_mas_reproducidas_artista;
+
 create or replace function canciones_mas_reproducidas_artista(artista character varying)
 returns table(
 	total_reproducciones bigint,
@@ -16082,7 +16093,7 @@ language 'plpgsql';
 --select * from canciones_mas_reproducidas_artista('Queen')
 
 
-drop function if exists canciones_mas_reproducidas_artista_por_fecha; 
+
 create or replace function canciones_mas_reproducidas_artista_por_fecha(inicio timestamp without time zone, fin timestamp without time zone, artista character varying)
 returns table(
 	total_reproducciones_por_fecha bigint,
