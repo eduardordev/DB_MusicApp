@@ -31,6 +31,8 @@ class Ui_HomeAdmin(object):
         MainWindow.setMinimumSize(QtCore.QSize(1000, 650))
         MainWindow.setMaximumSize(QtCore.QSize(1000, 650))
         MainWindow.setStyleSheet("background-color: #d1d1d5;")
+
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
@@ -45,7 +47,7 @@ class Ui_HomeAdmin(object):
 
 
         self.label_2 = QtWidgets.QLabel(self.frame)
-        self.label_2.setGeometry(QtCore.QRect(160, 5, 100, 100))
+        self.label_2.setGeometry(QtCore.QRect(180, 5, 100, 100))
         self.label_2.setMinimumSize(QtCore.QSize(140, 140))
         self.label_2.setMaximumSize(QtCore.QSize(140, 140))
         self.label_2.setStyleSheet("")
@@ -56,7 +58,7 @@ class Ui_HomeAdmin(object):
         self.label_2.setObjectName("label_2")
 
         self.tableWidget = QtWidgets.QTableWidget(self.frame)
-        self.tableWidget.setGeometry(QtCore.QRect(500, 177, 387, 370))
+        self.tableWidget.setGeometry(QtCore.QRect(470, 177, 400, 350))
         self.tableWidget.setStyleSheet("font: 13pt \"Times\";\n"
         "color: #1b1c34;\n"
         "background-color: #EDFEFB")
@@ -65,9 +67,9 @@ class Ui_HomeAdmin(object):
 
 
         self.pushButton_Exit = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Exit.setGeometry(QtCore.QRect(750, 20, 15, 15))
-        self.pushButton_Exit.setMinimumSize(QtCore.QSize(140, 50))
-        self.pushButton_Exit.setMaximumSize(QtCore.QSize(140, 50))
+        self.pushButton_Exit.setGeometry(QtCore.QRect(750, 30, 15, 15))
+        self.pushButton_Exit.setMinimumSize(QtCore.QSize(120, 40))
+        self.pushButton_Exit.setMaximumSize(QtCore.QSize(120, 40))
         self.pushButton_Exit.setStyleSheet("background-color: #0ca692;\n"
         "font: 14pt \"Times\";\n"
         "color: rgb(255, 255, 255);\n"
@@ -77,9 +79,9 @@ class Ui_HomeAdmin(object):
 
 
         self.textEdit_UserBuscar = QtWidgets.QTextEdit(self.frame)
-        self.textEdit_UserBuscar.setGeometry(QtCore.QRect(505, 120, 231, 31))
-        self.textEdit_UserBuscar.setMinimumSize(QtCore.QSize(260, 48))
-        self.textEdit_UserBuscar.setMaximumSize(QtCore.QSize(260, 48))
+        self.textEdit_UserBuscar.setGeometry(QtCore.QRect(470, 130, 240, 25))
+        self.textEdit_UserBuscar.setMinimumSize(QtCore.QSize(270, 40))
+        self.textEdit_UserBuscar.setMaximumSize(QtCore.QSize(270, 40))
         self.textEdit_UserBuscar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
         "font: 18pt \"Times\";\n"
         "color: rgb(0, 0, 0);\n"
@@ -140,9 +142,9 @@ class Ui_HomeAdmin(object):
 
 
         self.comboBox_OpcionesBuscar = QtWidgets.QComboBox(self.frame)
-        self.comboBox_OpcionesBuscar.setGeometry(QtCore.QRect(505, 75, 175, 30))
-        self.comboBox_OpcionesBuscar.setMinimumSize(QtCore.QSize(385, 40))
-        self.comboBox_OpcionesBuscar.setMaximumSize(QtCore.QSize(385, 40))
+        self.comboBox_OpcionesBuscar.setGeometry(QtCore.QRect(470, 80, 175, 30))
+        self.comboBox_OpcionesBuscar.setMinimumSize(QtCore.QSize(400, 40))
+        self.comboBox_OpcionesBuscar.setMaximumSize(QtCore.QSize(400, 40))
         self.comboBox_OpcionesBuscar.setStyleSheet("background-color: #d1d1d5;\n"
         "font: 14pt \"Times\";\n"
         "color: rgb(0, 0, 0);\n"
@@ -157,9 +159,9 @@ class Ui_HomeAdmin(object):
 
 
         self.pushButton_Buscar = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Buscar.setGeometry(QtCore.QRect(770, 117, 75, 31))
-        self.pushButton_Buscar.setMinimumSize(QtCore.QSize(120, 50))
-        self.pushButton_Buscar.setMaximumSize(QtCore.QSize(120, 50))
+        self.pushButton_Buscar.setGeometry(QtCore.QRect(750, 130, 110, 25))
+        self.pushButton_Buscar.setMinimumSize(QtCore.QSize(120, 40))
+        self.pushButton_Buscar.setMaximumSize(QtCore.QSize(120, 40))
         self.pushButton_Buscar.setStyleSheet("background-color: #0ca692;\n"
         "font: 14pt \"Times\";\n"
         "color: rgb(255, 255, 255);\n"
@@ -181,9 +183,9 @@ class Ui_HomeAdmin(object):
 
 
         self.pushButton_Tienda = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Tienda.setGeometry(QtCore.QRect(630, 20, 114, 32))
-        self.pushButton_Tienda.setMinimumSize(QtCore.QSize(140, 50))
-        self.pushButton_Tienda.setMaximumSize(QtCore.QSize(140, 50))
+        self.pushButton_Tienda.setGeometry(QtCore.QRect(610, 30, 114, 32))
+        self.pushButton_Tienda.setMinimumSize(QtCore.QSize(130, 40))
+        self.pushButton_Tienda.setMaximumSize(QtCore.QSize(130, 40))
         self.pushButton_Tienda.setStyleSheet("background-color: #0ca692;\n"
         "font: 14pt \"Times\";\n"
         "color: rgb(255, 255, 255);")
@@ -192,9 +194,9 @@ class Ui_HomeAdmin(object):
 
 
         self.pushButton_MiMusica = QtWidgets.QPushButton(self.frame)
-        self.pushButton_MiMusica.setGeometry(QtCore.QRect(499, 20, 114, 32))
-        self.pushButton_MiMusica.setMinimumSize(QtCore.QSize(140, 50))
-        self.pushButton_MiMusica.setMaximumSize(QtCore.QSize(140, 50))
+        self.pushButton_MiMusica.setGeometry(QtCore.QRect(470, 30, 114, 32))
+        self.pushButton_MiMusica.setMinimumSize(QtCore.QSize(130, 40))
+        self.pushButton_MiMusica.setMaximumSize(QtCore.QSize(130, 40))
         self.pushButton_MiMusica.setStyleSheet("background-color: #0ca692;\n"
         "font: 14pt \"Times\";\n"
         "color: rgb(255, 255, 255);")
@@ -204,9 +206,9 @@ class Ui_HomeAdmin(object):
 
 
         self.pushButton_Simulacion = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Simulacion.setGeometry(QtCore.QRect(80, 480, 100, 30))
-        self.pushButton_Simulacion.setMinimumSize(QtCore.QSize(100, 30))
-        self.pushButton_Simulacion.setMaximumSize(QtCore.QSize(75, 30))
+        self.pushButton_Simulacion.setGeometry(QtCore.QRect(190, 480, 100, 30))
+        self.pushButton_Simulacion.setMinimumSize(QtCore.QSize(120, 35))
+        self.pushButton_Simulacion.setMaximumSize(QtCore.QSize(120, 35))
         self.pushButton_Simulacion.setStyleSheet("background-color: #0ca692;\n"
         "font: 14pt \"Times\";\n"
         "color: rgb(255, 255, 255);\n"
