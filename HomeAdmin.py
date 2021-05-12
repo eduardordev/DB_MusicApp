@@ -254,9 +254,6 @@ class Ui_HomeAdmin(object):
         self.ui.setupUi(self.window)
         self.window.show()
 
-
-
-
     def openHomeAdminReporteria(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_HomeAdminReporteria()
