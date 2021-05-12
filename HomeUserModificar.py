@@ -124,7 +124,7 @@ class Ui_HomeUserModificar(object):
 
 
         self.label_10 = QtWidgets.QLabel(self.frame)
-        self.label_10.setGeometry(QtCore.QRect(630, 270, 100, 30))
+        self.label_10.setGeometry(QtCore.QRect(630, 220, 100, 30))
         self.label_10.setMinimumSize(QtCore.QSize(280, 40))
         self.label_10.setMaximumSize(QtCore.QSize(280, 40))
         self.label_10.setStyleSheet("background-color: #14546c;\n"
@@ -136,7 +136,7 @@ class Ui_HomeUserModificar(object):
 
 
         self.textEdit_CancionNombre = QtWidgets.QTextEdit(self.frame)
-        self.textEdit_CancionNombre.setGeometry(QtCore.QRect(630, 316, 100, 30))
+        self.textEdit_CancionNombre.setGeometry(QtCore.QRect(630, 270, 100, 30))
         self.textEdit_CancionNombre.setMinimumSize(QtCore.QSize(280, 40))
         self.textEdit_CancionNombre.setMaximumSize(QtCore.QSize(280, 40))
         self.textEdit_CancionNombre.setStyleSheet("background-color: rgb(150, 172, 183);\n"
@@ -263,7 +263,7 @@ class Ui_HomeUserModificar(object):
 
 
         self.comboBox_OpcionesCambioCanciones = QtWidgets.QComboBox(self.frame)
-        self.comboBox_OpcionesCambioCanciones.setGeometry(QtCore.QRect(630, 220, 100, 30))
+        self.comboBox_OpcionesCambioCanciones.setGeometry(QtCore.QRect(630, 316, 100, 30))
         self.comboBox_OpcionesCambioCanciones.setMinimumSize(QtCore.QSize(280, 40))
         self.comboBox_OpcionesCambioCanciones.setMaximumSize(QtCore.QSize(280, 40))
         self.comboBox_OpcionesCambioCanciones.setStyleSheet("background-color: #d1d1d5;\n"
@@ -321,7 +321,7 @@ class Ui_HomeUserModificar(object):
         self.label_6.setText(_translate("MainWindow", "‎ ‎   ‏‏‎    Artistas"))
         self.label_7.setText(_translate("MainWindow", " ‎   ‏‏‎    Álbumes"))
         self.label_9.setText(_translate("MainWindow", " ‎   ‏‏‎    Canciones"))
-        self.label_10.setText(_translate("MainWindow", " Valor Actual"))
+        self.label_10.setText(_translate("MainWindow", " ‎   ‏‏‎    Nombre"))
         self.textEdit_CancionNombre.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
