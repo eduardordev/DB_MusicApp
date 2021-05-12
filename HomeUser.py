@@ -13,6 +13,7 @@ class Ui_HomeUser(object):
         super(Ui_HomeUser, self).__init__()
         self.id = id
 
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1000, 650)
