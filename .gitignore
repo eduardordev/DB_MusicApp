@@ -1,0 +1,7 @@
+
+*.backup
+*.ini
+*.pyc
+*.csv
+*.pdf
+

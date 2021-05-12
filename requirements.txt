@@ -1,0 +1,7 @@
+PyQt5
+psycopg2
+fpdf
+urllib.request
+urllib.parse
+re
+webbrowser
