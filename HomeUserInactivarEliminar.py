@@ -48,11 +48,11 @@ class Ui_HomeUserInactivarEliminar(object):
 
 
         self.label_7 = QtWidgets.QLabel(self.frame)
-        self.label_7.setGeometry(QtCore.QRect(609, 130, 230, 50))
+        self.label_7.setGeometry(QtCore.QRect(670, 130, 230, 50))
         self.label_7.setMinimumSize(QtCore.QSize(220, 50))
         self.label_7.setMaximumSize(QtCore.QSize(230, 25))
-        self.label_7.setStyleSheet("font: 19pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_7.setStyleSheet("font: 16pt \"Times\";\n"
+"color: #ffffff;\n"
 "")
         self.label_7.setObjectName("label_7")
 
@@ -62,9 +62,9 @@ class Ui_HomeUserInactivarEliminar(object):
         self.tableWidget.setGeometry(QtCore.QRect(609, 230, 262, 231))
         self.tableWidget.setMinimumSize(QtCore.QSize(262, 231))
         self.tableWidget.setMaximumSize(QtCore.QSize(262, 231))
-        self.tableWidget.setStyleSheet("font: 13pt \"Times\";\n"
-"color: rgb(64, 55, 110);\n"
-"background-color: rgb(212, 228, 188);")
+        self.tableWidget.setStyleSheet("font: 14pt \"Times\";\n"
+        "color: #1b1c34;\n"
+        "background-color: #EDFEFB")
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(1)
         self.tableWidget.setRowCount(6)
@@ -88,33 +88,23 @@ class Ui_HomeUserInactivarEliminar(object):
 
 
         self.textEdit_UserBuscar = QtWidgets.QTextEdit(self.frame)
-        self.textEdit_UserBuscar.setGeometry(QtCore.QRect(640, 200, 156, 31))
-        self.textEdit_UserBuscar.setMinimumSize(QtCore.QSize(156, 0))
-        self.textEdit_UserBuscar.setMaximumSize(QtCore.QSize(156, 16777215))
-        self.textEdit_UserBuscar.setStyleSheet("background-color: rgb(150, 172, 183);\n"
+        self.textEdit_UserBuscar.setGeometry(QtCore.QRect(609, 190, 156, 31))
+        self.textEdit_UserBuscar.setMinimumSize(QtCore.QSize(180, 30))
+        self.textEdit_UserBuscar.setMaximumSize(QtCore.QSize(180, 30))
+        self.textEdit_UserBuscar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "font: 13pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+"color: rgb(0, 0, 0);\n"
+"border-radius:5px;")
         self.textEdit_UserBuscar.setObjectName("textEdit_UserBuscar")
 
 
 
-        self.label_4 = QtWidgets.QLabel(self.frame)
-        self.label_4.setGeometry(QtCore.QRect(609, 199, 31, 31))
-        self.label_4.setStyleSheet("")
-        self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("finder.png"))
-        self.label_4.setScaledContents(True)
-        self.label_4.setObjectName("label_4")
-
-
-
         self.label_8 = QtWidgets.QLabel(self.frame)
-        self.label_8.setGeometry(QtCore.QRect(30, 130, 280, 50))
+        self.label_8.setGeometry(QtCore.QRect(40, 130, 280, 50))
         self.label_8.setMinimumSize(QtCore.QSize(280, 50))
         self.label_8.setMaximumSize(QtCore.QSize(210, 25))
-        self.label_8.setStyleSheet("font: 19pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_8.setStyleSheet("font: 16pt \"Times\";\n"
+"color: #ffffff;\n"
 "")
         self.label_8.setObjectName("label_8")
 
@@ -130,21 +120,22 @@ class Ui_HomeUserInactivarEliminar(object):
 
 
         self.textEdit_UserBuscar_2 = QtWidgets.QTextEdit(self.frame)
-        self.textEdit_UserBuscar_2.setGeometry(QtCore.QRect(61, 200, 156, 31))
-        self.textEdit_UserBuscar_2.setMinimumSize(QtCore.QSize(156, 0))
-        self.textEdit_UserBuscar_2.setMaximumSize(QtCore.QSize(156, 16777215))
-        self.textEdit_UserBuscar_2.setStyleSheet("background-color: rgb(150, 172, 183);\n"
+        self.textEdit_UserBuscar_2.setGeometry(QtCore.QRect(30, 190, 156, 31))
+        self.textEdit_UserBuscar_2.setMinimumSize(QtCore.QSize(180, 30))
+        self.textEdit_UserBuscar_2.setMaximumSize(QtCore.QSize(180, 30))
+        self.textEdit_UserBuscar_2.setStyleSheet("background-color: #ffffff;\n"
 "font: 13pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+"color: rgb(0, 0, 0);\n"
+"border-radius:5px;")
         self.textEdit_UserBuscar_2.setObjectName("textEdit_UserBuscar_2")
+
         self.tableWidget_2 = QtWidgets.QTableWidget(self.frame)
         self.tableWidget_2.setGeometry(QtCore.QRect(30, 230, 262, 231))
         self.tableWidget_2.setMinimumSize(QtCore.QSize(262, 231))
         self.tableWidget_2.setMaximumSize(QtCore.QSize(262, 231))
-        self.tableWidget_2.setStyleSheet("font: 13pt \"Times\";\n"
-"color: rgb(64, 55, 110);\n"
-"background-color: rgb(212, 228, 188);")
+        self.tableWidget_2.setStyleSheet("font: 14pt \"Times\";\n"
+        "color: #1b1c34;\n"
+        "background-color: #EDFEFB")
         self.tableWidget_2.setObjectName("tableWidget_2")
         self.tableWidget_2.setColumnCount(1)
         self.tableWidget_2.setRowCount(6)
@@ -166,48 +157,48 @@ class Ui_HomeUserInactivarEliminar(object):
 
         self.pushButton_EliminarCancion = QtWidgets.QPushButton(self.frame)
         self.pushButton_EliminarCancion.setGeometry(QtCore.QRect(30, 480, 114, 32))
-        self.pushButton_EliminarCancion.setMinimumSize(QtCore.QSize(114, 32))
-        self.pushButton_EliminarCancion.setMaximumSize(QtCore.QSize(114, 32))
-        self.pushButton_EliminarCancion.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-"font: 14pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+        self.pushButton_EliminarCancion.setMinimumSize(QtCore.QSize(125, 40))
+        self.pushButton_EliminarCancion.setMaximumSize(QtCore.QSize(125, 40))
+        self.pushButton_EliminarCancion.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius: 5px;")
         self.pushButton_EliminarCancion.setObjectName("pushButton_EliminarCancion")
 
 
         self.pushButton_EliminarAlbum = QtWidgets.QPushButton(self.frame)
-        self.pushButton_EliminarAlbum.setGeometry(QtCore.QRect(690, 480, 114, 32))
-        self.pushButton_EliminarAlbum.setMinimumSize(QtCore.QSize(114, 32))
-        self.pushButton_EliminarAlbum.setMaximumSize(QtCore.QSize(114, 32))
-        self.pushButton_EliminarAlbum.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-"font: 14pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+        self.pushButton_EliminarAlbum.setGeometry(QtCore.QRect(674, 480, 114, 32))
+        self.pushButton_EliminarAlbum.setMinimumSize(QtCore.QSize(140, 40))
+        self.pushButton_EliminarAlbum.setMaximumSize(QtCore.QSize(140, 40))
+        self.pushButton_EliminarAlbum.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius: 5px;")
         self.pushButton_EliminarAlbum.setObjectName("pushButton_EliminarAlbum")
         self.pushButton_EliminarAlbum.clicked.connect(self.eliminarAlbum)
 
 
 
         self.pushButton_BuscarEliminarInactivarCancion = QtWidgets.QPushButton(self.frame)
-        self.pushButton_BuscarEliminarInactivarCancion.setGeometry(QtCore.QRect(217, 200, 75, 31))
+        self.pushButton_BuscarEliminarInactivarCancion.setGeometry(QtCore.QRect(217, 190, 75, 31))
         self.pushButton_BuscarEliminarInactivarCancion.setMinimumSize(QtCore.QSize(75, 31))
         self.pushButton_BuscarEliminarInactivarCancion.setMaximumSize(QtCore.QSize(75, 31))
-        self.pushButton_BuscarEliminarInactivarCancion.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-"font: 14pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+        self.pushButton_BuscarEliminarInactivarCancion.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius: 5px;")
         self.pushButton_BuscarEliminarInactivarCancion.setObjectName("pushButton_BuscarEliminarInactivarCancion")
         
         
         
         self.pushButton_BuscarEliminarAlbum = QtWidgets.QPushButton(self.frame)
-        self.pushButton_BuscarEliminarAlbum.setGeometry(QtCore.QRect(796, 200, 75, 31))
+        self.pushButton_BuscarEliminarAlbum.setGeometry(QtCore.QRect(796, 190, 75, 31))
         self.pushButton_BuscarEliminarAlbum.setMinimumSize(QtCore.QSize(75, 31))
         self.pushButton_BuscarEliminarAlbum.setMaximumSize(QtCore.QSize(75, 31))
-        self.pushButton_BuscarEliminarAlbum.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-"font: 14pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+        self.pushButton_BuscarEliminarAlbum.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius: 5px;")
         self.pushButton_BuscarEliminarAlbum.setObjectName("pushButton_BuscarEliminarAlbum")
        
        
@@ -227,25 +218,25 @@ class Ui_HomeUserInactivarEliminar(object):
 
 
         self.textEdit_UserBuscar_3 = QtWidgets.QTextEdit(self.frame)
-        self.textEdit_UserBuscar_3.setGeometry(QtCore.QRect(351, 200, 156, 31))
-        self.textEdit_UserBuscar_3.setMinimumSize(QtCore.QSize(156, 0))
-        self.textEdit_UserBuscar_3.setMaximumSize(QtCore.QSize(156, 16777215))
-        self.textEdit_UserBuscar_3.setStyleSheet("background-color: rgb(150, 172, 183);\n"
+        self.textEdit_UserBuscar_3.setGeometry(QtCore.QRect(320, 190, 156, 31))
+        self.textEdit_UserBuscar_3.setMinimumSize(QtCore.QSize(180, 30))
+        self.textEdit_UserBuscar_3.setMaximumSize(QtCore.QSize(180, 30))
+        self.textEdit_UserBuscar_3.setStyleSheet("background-color: #ffffff;\n"
 "font: 13pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+"color: rgb(0, 0, 0);\n"
+"border-radius:5px;")
         self.textEdit_UserBuscar_3.setObjectName("textEdit_UserBuscar_3")
 
 
 
         self.pushButton_BuscarEliminarArtista = QtWidgets.QPushButton(self.frame)
-        self.pushButton_BuscarEliminarArtista.setGeometry(QtCore.QRect(507, 200, 75, 31))
-        self.pushButton_BuscarEliminarArtista.setMinimumSize(QtCore.QSize(75, 31))
-        self.pushButton_BuscarEliminarArtista.setMaximumSize(QtCore.QSize(75, 31))
-        self.pushButton_BuscarEliminarArtista.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-"font: 14pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+        self.pushButton_BuscarEliminarArtista.setGeometry(QtCore.QRect(507, 190, 75, 31))
+        self.pushButton_BuscarEliminarArtista.setMinimumSize(QtCore.QSize(75, 30))
+        self.pushButton_BuscarEliminarArtista.setMaximumSize(QtCore.QSize(75, 30))
+        self.pushButton_BuscarEliminarArtista.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius: 5px;")
         self.pushButton_BuscarEliminarArtista.setObjectName("pushButton_BuscarEliminarArtista")
         self.pushButton_BuscarEliminarArtista.clicked.connect(self.buscarArtista)
 
@@ -255,9 +246,9 @@ class Ui_HomeUserInactivarEliminar(object):
         self.tableWidget_3.setGeometry(QtCore.QRect(320, 230, 262, 231))
         self.tableWidget_3.setMinimumSize(QtCore.QSize(262, 231))
         self.tableWidget_3.setMaximumSize(QtCore.QSize(262, 231))
-        self.tableWidget_3.setStyleSheet("font: 13pt \"Times\";\n"
-"color: rgb(64, 55, 110);\n"
-"background-color: rgb(212, 228, 188);")
+        self.tableWidget_3.setStyleSheet("font: 14pt \"Times\";\n"
+        "color: #1b1c34;\n"
+        "background-color: #EDFEFB")
         self.tableWidget_3.setObjectName("tableWidget_3")
         self.tableWidget_3.setColumnCount(1)
         self.tableWidget_3.setRowCount(6)
@@ -279,24 +270,24 @@ class Ui_HomeUserInactivarEliminar(object):
 
 
         self.pushButton_EliminarArtista = QtWidgets.QPushButton(self.frame)
-        self.pushButton_EliminarArtista.setGeometry(QtCore.QRect(394, 480, 114, 32))
-        self.pushButton_EliminarArtista.setMinimumSize(QtCore.QSize(114, 32))
-        self.pushButton_EliminarArtista.setMaximumSize(QtCore.QSize(114, 32))
-        self.pushButton_EliminarArtista.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-"font: 14pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+        self.pushButton_EliminarArtista.setGeometry(QtCore.QRect(374, 480, 114, 32))
+        self.pushButton_EliminarArtista.setMinimumSize(QtCore.QSize(140, 40))
+        self.pushButton_EliminarArtista.setMaximumSize(QtCore.QSize(140, 40))
+        self.pushButton_EliminarArtista.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius: 5px;")
         self.pushButton_EliminarArtista.setObjectName("pushButton_EliminarArtista")
         self.pushButton_EliminarArtista.clicked.connect(self.eliminarArtista)
 
 
 
         self.label_9 = QtWidgets.QLabel(self.frame)
-        self.label_9.setGeometry(QtCore.QRect(320, 130, 280, 50))
+        self.label_9.setGeometry(QtCore.QRect(380, 130, 280, 50))
         self.label_9.setMinimumSize(QtCore.QSize(280, 50))
         self.label_9.setMaximumSize(QtCore.QSize(210, 25))
-        self.label_9.setStyleSheet("font: 19pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
+        self.label_9.setStyleSheet("font: 16pt \"Times\";\n"
+"color: #ffffff;\n"
 "")
         self.label_9.setObjectName("label_9")
 
@@ -304,13 +295,13 @@ class Ui_HomeUserInactivarEliminar(object):
 
 
         self.pushButton_InactivarCancion = QtWidgets.QPushButton(self.frame)
-        self.pushButton_InactivarCancion.setGeometry(QtCore.QRect(178, 480, 114, 32))
-        self.pushButton_InactivarCancion.setMinimumSize(QtCore.QSize(114, 32))
-        self.pushButton_InactivarCancion.setMaximumSize(QtCore.QSize(114, 32))
-        self.pushButton_InactivarCancion.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-"font: 14pt \"Times\";\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+        self.pushButton_InactivarCancion.setGeometry(QtCore.QRect(170, 480, 114, 32))
+        self.pushButton_InactivarCancion.setMinimumSize(QtCore.QSize(125, 40))
+        self.pushButton_InactivarCancion.setMaximumSize(QtCore.QSize(125, 40))
+        self.pushButton_InactivarCancion.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius: 5px;")
         self.pushButton_InactivarCancion.setObjectName("pushButton_InactivarCancion")
 
 
@@ -320,7 +311,6 @@ class Ui_HomeUserInactivarEliminar(object):
         self.tableWidget.raise_()
         # self.pushButton_Login.raise_()
         self.textEdit_UserBuscar.raise_()
-        self.label_4.raise_()
         self.label_5.raise_()
         self.textEdit_UserBuscar_2.raise_()
         self.tableWidget_2.raise_()
