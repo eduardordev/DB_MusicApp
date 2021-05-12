@@ -544,11 +544,15 @@ class Ui_HomeUserInactivarEliminar(object):
             print('Mal')
 
     def eliminarArtista(self):
+        
         if (self.tableWidget_3.item(self.tableWidget_3.currentRow(), 0)):
+
             artistId = self.tableWidget_3.item(self.tableWidget_3.currentRow(), 0).text()
             query2 = "DELETE FROM artist WHERE artist.artistid = \'"+ artistId +"\'"
             print(artistId)
+
             try:
+
                 conn = None
                 params=config()
                 conn = bd.connect(**params)
@@ -561,21 +565,30 @@ class Ui_HomeUserInactivarEliminar(object):
                 cursor.execute(query2)
                 conn.commit() 
                 self.openPopUpCheck('Se borró con éxito')
+
             except(Exception) as error:
+
                 print("EROOOR", error)
                 self.openPopUpError('Error')
+
             finally:
+
                 if(conn):
+
                     cursor.close()
                     conn.close()
                     self.buscarArtista()
 
     def eliminarAlbum(self):
+
         if (self.tableWidget.item(self.tableWidget.currentRow(), 0)):
+
             albumid = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
             query2 = "DELETE FROM album WHERE album.albumid = \'"+ albumid +"\'"
             print(albumid)
+
             try:
+
                 conn = None
                 params=config()
                 conn = bd.connect(**params)
@@ -588,10 +601,14 @@ class Ui_HomeUserInactivarEliminar(object):
                 cursor.execute(query2)
                 conn.commit() 
                 self.openPopUpCheck('Se borró con éxito')
+
             except(Exception) as error:
+
                 print("EROOOR", error)
-                self.openPopUpError('Error')                
+                self.openPopUpError('Error')  
+
             finally:
+
                 if(conn):
                     cursor.close()
                     conn.close()

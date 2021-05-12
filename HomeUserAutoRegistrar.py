@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'HomeUserAutoRegistrar.ui'
-#
-# Created by: PyQt5 UI code generator 5.12.3
-#
-# WARNING! All changes made in this file will be lost!
-
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
@@ -52,14 +44,9 @@ class Ui_HomeUserAutoRegistrar(object):
         self.label_2.setScaledContents(True)
         self.label_2.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.label_2.setObjectName("label_2")
-#         self.pushButton_Exit = QtWidgets.QPushButton(self.frame)
-#         self.pushButton_Exit.setGeometry(QtCore.QRect(756, 50, 114, 32))
-#         self.pushButton_Exit.setMinimumSize(QtCore.QSize(114, 32))
-#         self.pushButton_Exit.setMaximumSize(QtCore.QSize(114, 32))
-#         self.pushButton_Exit.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-# "font: 14pt \"Times\";\n"
-# "color: rgb(255, 255, 255);")
-#         self.pushButton_Exit.setObjectName("pushButton_Exit")
+
+
+        
         self.label_3 = QtWidgets.QLabel(self.frame)
         self.label_3.setGeometry(QtCore.QRect(30, 240, 100, 25))
         self.label_3.setMinimumSize(QtCore.QSize(100, 25))
