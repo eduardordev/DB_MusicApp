@@ -52,7 +52,7 @@ class Ui_HomeAdminReporteria(object):
         self.tableWidget.setMaximumSize(QtCore.QSize(500, 240))
         self.tableWidget.setStyleSheet("font: 14pt \"Times\";\n"
         "color: #1b1c34;\n"
-        "background-color: #EDFEFB")
+        "background-color: #EDFEFB" )
         self.tableWidget.setObjectName("tableWidget")
 
 
