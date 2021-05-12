@@ -248,12 +248,6 @@ class Ui_HomeAdmin(object):
         msgGood.setIcon(QMessageBox.Information)
         y = msgGood.exec_()
 
-    def openTienda(self, id):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Tienda(self.id)
-        self.ui.setupUi(self.window)
-        self.window.show()
-
     def openBitacora(self, id):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_Bitacora(self.id)
