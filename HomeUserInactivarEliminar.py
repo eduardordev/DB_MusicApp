@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'HomeUserInactivarEliminar.ui'
-#
-# Created by: PyQt5 UI code generator 5.12.3
-#
-# WARNING! All changes made in this file will be lost!
-
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 import sys
@@ -24,36 +15,38 @@ class Ui_HomeUserInactivarEliminar(object):
         MainWindow.resize(1000, 650)
         MainWindow.setMinimumSize(QtCore.QSize(1000, 650))
         MainWindow.setMaximumSize(QtCore.QSize(1000, 650))
-        MainWindow.setStyleSheet("background-color: rgb(72,35,60);")
+        MainWindow.setStyleSheet("background-color:  #d1d1d5;")
+
+
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+
+
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(50, 50, 900, 550))
         self.frame.setMinimumSize(QtCore.QSize(900, 550))
         self.frame.setMaximumSize(QtCore.QSize(900, 550))
-        self.frame.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius:12px;")
+        self.frame.setStyleSheet("background-color:  #1c1d32;\n"
+"border-radius:5px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.label = QtWidgets.QLabel(self.frame)
-        self.label.setGeometry(QtCore.QRect(130, 50, 205, 50))
-        self.label.setMinimumSize(QtCore.QSize(205, 50))
-        self.label.setMaximumSize(QtCore.QSize(205, 50))
-        self.label.setStyleSheet("font: 24pt \"Times\";\n"
-"color: rgb(10, 54, 157);\n"
-"")
-        self.label.setObjectName("label")
+
+
         self.label_2 = QtWidgets.QLabel(self.frame)
-        self.label_2.setGeometry(QtCore.QRect(20, 20, 100, 100))
+        self.label_2.setGeometry(QtCore.QRect(400, 20, 100, 100))
         self.label_2.setMinimumSize(QtCore.QSize(100, 100))
         self.label_2.setMaximumSize(QtCore.QSize(100, 100))
         self.label_2.setStyleSheet("")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("logo.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("musics.PNG"))
         self.label_2.setScaledContents(True)
         self.label_2.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.label_2.setObjectName("label_2")
+
+
+
         self.label_7 = QtWidgets.QLabel(self.frame)
         self.label_7.setGeometry(QtCore.QRect(609, 130, 230, 50))
         self.label_7.setMinimumSize(QtCore.QSize(220, 50))
@@ -62,6 +55,9 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(10, 54, 157);\n"
 "")
         self.label_7.setObjectName("label_7")
+
+
+
         self.tableWidget = QtWidgets.QTableWidget(self.frame)
         self.tableWidget.setGeometry(QtCore.QRect(609, 230, 262, 231))
         self.tableWidget.setMinimumSize(QtCore.QSize(262, 231))
@@ -72,6 +68,8 @@ class Ui_HomeUserInactivarEliminar(object):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(1)
         self.tableWidget.setRowCount(6)
+
+
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
@@ -86,15 +84,9 @@ class Ui_HomeUserInactivarEliminar(object):
         self.tableWidget.setVerticalHeaderItem(5, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
-#         self.pushButton_Login = QtWidgets.QPushButton(self.frame)
-#         self.pushButton_Login.setGeometry(QtCore.QRect(756, 50, 114, 32))
-#         self.pushButton_Login.setMinimumSize(QtCore.QSize(114, 32))
-#         self.pushButton_Login.setMaximumSize(QtCore.QSize(114, 32))
-#         self.pushButton_Login.setStyleSheet("background-color: rgb(10, 54, 157);\n"
-# "font: 14pt \"Times\";\n"
-# "color: rgb(255, 255, 255);\n"
-# "border-radius:12px;")
-#         self.pushButton_Login.setObjectName("pushButton_Login")
+
+
+
         self.textEdit_UserBuscar = QtWidgets.QTextEdit(self.frame)
         self.textEdit_UserBuscar.setGeometry(QtCore.QRect(640, 200, 156, 31))
         self.textEdit_UserBuscar.setMinimumSize(QtCore.QSize(156, 0))
@@ -104,6 +96,9 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius:12px;")
         self.textEdit_UserBuscar.setObjectName("textEdit_UserBuscar")
+
+
+
         self.label_4 = QtWidgets.QLabel(self.frame)
         self.label_4.setGeometry(QtCore.QRect(609, 199, 31, 31))
         self.label_4.setStyleSheet("")
@@ -111,6 +106,9 @@ class Ui_HomeUserInactivarEliminar(object):
         self.label_4.setPixmap(QtGui.QPixmap("finder.png"))
         self.label_4.setScaledContents(True)
         self.label_4.setObjectName("label_4")
+
+
+
         self.label_8 = QtWidgets.QLabel(self.frame)
         self.label_8.setGeometry(QtCore.QRect(30, 130, 280, 50))
         self.label_8.setMinimumSize(QtCore.QSize(280, 50))
@@ -119,6 +117,8 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(10, 54, 157);\n"
 "")
         self.label_8.setObjectName("label_8")
+
+
         self.label_5 = QtWidgets.QLabel(self.frame)
         self.label_5.setGeometry(QtCore.QRect(30, 199, 31, 31))
         self.label_5.setStyleSheet("")
@@ -126,6 +126,9 @@ class Ui_HomeUserInactivarEliminar(object):
         self.label_5.setPixmap(QtGui.QPixmap("finder.png"))
         self.label_5.setScaledContents(True)
         self.label_5.setObjectName("label_5")
+
+
+
         self.textEdit_UserBuscar_2 = QtWidgets.QTextEdit(self.frame)
         self.textEdit_UserBuscar_2.setGeometry(QtCore.QRect(61, 200, 156, 31))
         self.textEdit_UserBuscar_2.setMinimumSize(QtCore.QSize(156, 0))
@@ -159,6 +162,8 @@ class Ui_HomeUserInactivarEliminar(object):
         self.tableWidget_2.setVerticalHeaderItem(5, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_2.setHorizontalHeaderItem(0, item)
+
+
         self.pushButton_EliminarCancion = QtWidgets.QPushButton(self.frame)
         self.pushButton_EliminarCancion.setGeometry(QtCore.QRect(30, 480, 114, 32))
         self.pushButton_EliminarCancion.setMinimumSize(QtCore.QSize(114, 32))
@@ -168,6 +173,8 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius:12px;")
         self.pushButton_EliminarCancion.setObjectName("pushButton_EliminarCancion")
+
+
         self.pushButton_EliminarAlbum = QtWidgets.QPushButton(self.frame)
         self.pushButton_EliminarAlbum.setGeometry(QtCore.QRect(690, 480, 114, 32))
         self.pushButton_EliminarAlbum.setMinimumSize(QtCore.QSize(114, 32))
@@ -178,6 +185,9 @@ class Ui_HomeUserInactivarEliminar(object):
 "border-radius:12px;")
         self.pushButton_EliminarAlbum.setObjectName("pushButton_EliminarAlbum")
         self.pushButton_EliminarAlbum.clicked.connect(self.eliminarAlbum)
+
+
+
         self.pushButton_BuscarEliminarInactivarCancion = QtWidgets.QPushButton(self.frame)
         self.pushButton_BuscarEliminarInactivarCancion.setGeometry(QtCore.QRect(217, 200, 75, 31))
         self.pushButton_BuscarEliminarInactivarCancion.setMinimumSize(QtCore.QSize(75, 31))
@@ -187,6 +197,9 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius:12px;")
         self.pushButton_BuscarEliminarInactivarCancion.setObjectName("pushButton_BuscarEliminarInactivarCancion")
+        
+        
+        
         self.pushButton_BuscarEliminarAlbum = QtWidgets.QPushButton(self.frame)
         self.pushButton_BuscarEliminarAlbum.setGeometry(QtCore.QRect(796, 200, 75, 31))
         self.pushButton_BuscarEliminarAlbum.setMinimumSize(QtCore.QSize(75, 31))
@@ -196,8 +209,13 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius:12px;")
         self.pushButton_BuscarEliminarAlbum.setObjectName("pushButton_BuscarEliminarAlbum")
+       
+       
+       
         self.pushButton_BuscarEliminarInactivarCancion.clicked.connect(self.llenarTablaCanciones)
         self.pushButton_BuscarEliminarAlbum.clicked.connect(self.buscarAlbum)
+
+
         self.label_6 = QtWidgets.QLabel(self.frame)
         self.label_6.setGeometry(QtCore.QRect(320, 200, 31, 31))
         self.label_6.setStyleSheet("")
@@ -205,6 +223,9 @@ class Ui_HomeUserInactivarEliminar(object):
         self.label_6.setPixmap(QtGui.QPixmap("finder.png"))
         self.label_6.setScaledContents(True)
         self.label_6.setObjectName("label_6")
+
+
+
         self.textEdit_UserBuscar_3 = QtWidgets.QTextEdit(self.frame)
         self.textEdit_UserBuscar_3.setGeometry(QtCore.QRect(351, 200, 156, 31))
         self.textEdit_UserBuscar_3.setMinimumSize(QtCore.QSize(156, 0))
@@ -214,6 +235,9 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius:12px;")
         self.textEdit_UserBuscar_3.setObjectName("textEdit_UserBuscar_3")
+
+
+
         self.pushButton_BuscarEliminarArtista = QtWidgets.QPushButton(self.frame)
         self.pushButton_BuscarEliminarArtista.setGeometry(QtCore.QRect(507, 200, 75, 31))
         self.pushButton_BuscarEliminarArtista.setMinimumSize(QtCore.QSize(75, 31))
@@ -224,6 +248,9 @@ class Ui_HomeUserInactivarEliminar(object):
 "border-radius:12px;")
         self.pushButton_BuscarEliminarArtista.setObjectName("pushButton_BuscarEliminarArtista")
         self.pushButton_BuscarEliminarArtista.clicked.connect(self.buscarArtista)
+
+
+
         self.tableWidget_3 = QtWidgets.QTableWidget(self.frame)
         self.tableWidget_3.setGeometry(QtCore.QRect(320, 230, 262, 231))
         self.tableWidget_3.setMinimumSize(QtCore.QSize(262, 231))
@@ -248,6 +275,9 @@ class Ui_HomeUserInactivarEliminar(object):
         self.tableWidget_3.setVerticalHeaderItem(5, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_3.setHorizontalHeaderItem(0, item)
+
+
+
         self.pushButton_EliminarArtista = QtWidgets.QPushButton(self.frame)
         self.pushButton_EliminarArtista.setGeometry(QtCore.QRect(394, 480, 114, 32))
         self.pushButton_EliminarArtista.setMinimumSize(QtCore.QSize(114, 32))
@@ -258,6 +288,9 @@ class Ui_HomeUserInactivarEliminar(object):
 "border-radius:12px;")
         self.pushButton_EliminarArtista.setObjectName("pushButton_EliminarArtista")
         self.pushButton_EliminarArtista.clicked.connect(self.eliminarArtista)
+
+
+
         self.label_9 = QtWidgets.QLabel(self.frame)
         self.label_9.setGeometry(QtCore.QRect(320, 130, 280, 50))
         self.label_9.setMinimumSize(QtCore.QSize(280, 50))
@@ -266,6 +299,10 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(10, 54, 157);\n"
 "")
         self.label_9.setObjectName("label_9")
+
+
+
+
         self.pushButton_InactivarCancion = QtWidgets.QPushButton(self.frame)
         self.pushButton_InactivarCancion.setGeometry(QtCore.QRect(178, 480, 114, 32))
         self.pushButton_InactivarCancion.setMinimumSize(QtCore.QSize(114, 32))
@@ -275,9 +312,10 @@ class Ui_HomeUserInactivarEliminar(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius:12px;")
         self.pushButton_InactivarCancion.setObjectName("pushButton_InactivarCancion")
+
+
         self.label_8.raise_()
         self.label_7.raise_()
-        self.label.raise_()
         self.label_2.raise_()
         self.tableWidget.raise_()
         # self.pushButton_Login.raise_()
@@ -306,23 +344,8 @@ class Ui_HomeUserInactivarEliminar(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Sonido Cloud "))
         self.label_7.setText(_translate("MainWindow", "Eliminar Álbum"))
-        # item = self.tableWidget.verticalHeaderItem(0)
-        # item.setText(_translate("MainWindow", "aqui"))
-        # item = self.tableWidget.verticalHeaderItem(1)
-        # item.setText(_translate("MainWindow", "van"))
-        # item = self.tableWidget.verticalHeaderItem(2)
-        # item.setText(_translate("MainWindow", "New Row"))
-        # item = self.tableWidget.verticalHeaderItem(3)
-        # item.setText(_translate("MainWindow", "las"))
-        # item = self.tableWidget.verticalHeaderItem(4)
-        # item.setText(_translate("MainWindow", "filas"))
-        # item = self.tableWidget.verticalHeaderItem(5)
-        # item.setText(_translate("MainWindow", "proyecto"))
-        # item = self.tableWidget.horizontalHeaderItem(0)
-        # item.setText(_translate("MainWindow", "canciones"))
-        # self.pushButton_Login.setText(_translate("MainWindow", "Salir"))
+
         self.textEdit_UserBuscar.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -334,20 +357,7 @@ class Ui_HomeUserInactivarEliminar(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Times\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        # item = self.tableWidget_2.verticalHeaderItem(0)
-        # item.setText(_translate("MainWindow", "aqui"))
-        # item = self.tableWidget_2.verticalHeaderItem(1)
-        # item.setText(_translate("MainWindow", "van"))
-        # item = self.tableWidget_2.verticalHeaderItem(2)
-        # item.setText(_translate("MainWindow", "New Row"))
-        # item = self.tableWidget_2.verticalHeaderItem(3)
-        # item.setText(_translate("MainWindow", "las"))
-        # item = self.tableWidget_2.verticalHeaderItem(4)
-        # item.setText(_translate("MainWindow", "filas"))
-        # item = self.tableWidget_2.verticalHeaderItem(5)
-        # item.setText(_translate("MainWindow", "proyecto"))
-        # item = self.tableWidget_2.horizontalHeaderItem(0)
-        # item.setText(_translate("MainWindow", "canciones"))
+
         self.pushButton_EliminarCancion.setText(_translate("MainWindow", "Eliminar"))
         self.pushButton_EliminarAlbum.setText(_translate("MainWindow", "Eliminar"))
         self.pushButton_BuscarEliminarInactivarCancion.setText(_translate("MainWindow", "Buscar"))
@@ -358,20 +368,7 @@ class Ui_HomeUserInactivarEliminar(object):
 "</style></head><body style=\" font-family:\'Times\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.pushButton_BuscarEliminarArtista.setText(_translate("MainWindow", "Buscar"))
-        # item = self.tableWidget_3.verticalHeaderItem(0)
-        # item.setText(_translate("MainWindow", "aqui"))
-        # item = self.tableWidget_3.verticalHeaderItem(1)
-        # item.setText(_translate("MainWindow", "van"))
-        # item = self.tableWidget_3.verticalHeaderItem(2)
-        # item.setText(_translate("MainWindow", "New Row"))
-        # item = self.tableWidget_3.verticalHeaderItem(3)
-        # item.setText(_translate("MainWindow", "las"))
-        # item = self.tableWidget_3.verticalHeaderItem(4)
-        # item.setText(_translate("MainWindow", "filas"))
-        # item = self.tableWidget_3.verticalHeaderItem(5)
-        # item.setText(_translate("MainWindow", "proyecto"))
-        # item = self.tableWidget_3.horizontalHeaderItem(0)
-        # item.setText(_translate("MainWindow", "canciones"))
+       
         self.pushButton_EliminarArtista.setText(_translate("MainWindow", "Eliminar"))
         self.label_9.setText(_translate("MainWindow", "Eliminar Artista"))
         self.pushButton_InactivarCancion.setText(_translate("MainWindow", "Inactivar"))
@@ -609,11 +606,3 @@ class Ui_HomeUserInactivarEliminar(object):
                     cursor.close()
                     conn.close()
                     self.buscarAlbum()
-
-# if __name__ == "__main__":
-#     app = QtWidgets.QApplication(sys.argv)
-#     HomeUserActivarEliminar = QtWidgets.QMainWindow()
-#     ui = Ui_HomeUserInactivarEliminar()
-#     ui.setupUi(HomeUserActivarEliminar)
-#     HomeUserActivarEliminar.show()
-#     sys.exit(app.exec_())
