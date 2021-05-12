@@ -107,7 +107,6 @@ class Ui_HomeAdminGestionPermisos(object):
         self.comboBox_OpcionesBuscar.addItem("")
         self.comboBox_OpcionesBuscar.addItem("")
         self.comboBox_OpcionesBuscar.addItem("")
-        self.comboBox_OpcionesBuscar.addItem("")
 
 
         self.pushButton_Buscar = QtWidgets.QPushButton(self.frame)
@@ -135,6 +134,7 @@ class Ui_HomeAdminGestionPermisos(object):
         self.label_8.raise_()
         self.label_2.raise_()
         self.tableWidget.raise_()
+        #self.pushButton_Exit.raise_()
         self.textEdit_UserBuscar.raise_()
         self.comboBox_OpcionesBuscar.raise_()
         self.pushButton_Buscar.raise_()
@@ -164,7 +164,6 @@ class Ui_HomeAdminGestionPermisos(object):
         self.comboBox_OpcionesBuscar.setItemText(1, _translate("MainWindow", "0"))
         self.comboBox_OpcionesBuscar.setItemText(2, _translate("MainWindow", "1"))
         self.comboBox_OpcionesBuscar.setItemText(3, _translate("MainWindow", "2"))
-        self.comboBox_OpcionesBuscar.setItemText(4, _translate("MainWindow", "3"))
         self.pushButton_Buscar.setText(_translate("MainWindow", "Buscar"))
         self.pushButton_Cambiar.setText(_translate("MainWindow", "Cambiar"))
 
