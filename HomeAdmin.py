@@ -12,7 +12,6 @@ from Tienda import Ui_Tienda
 from HomeAdminReporteria import Ui_HomeAdminReporteria
 from HomeUserRegistrar import Ui_HomeUserRegistrar
 from HomeAdminGestionPermisos import Ui_HomeAdminGestionPermisos
-from Simulacion import Ui_Simulacion
 from MiMusica import Ui_MiMusica
 from Bitacora import Ui_Bitacora
 from queries import *
@@ -205,15 +204,6 @@ class Ui_HomeAdmin(object):
 
 
 
-        self.pushButton_Simulacion = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Simulacion.setGeometry(QtCore.QRect(190, 480, 100, 30))
-        self.pushButton_Simulacion.setMinimumSize(QtCore.QSize(120, 35))
-        self.pushButton_Simulacion.setMaximumSize(QtCore.QSize(120, 35))
-        self.pushButton_Simulacion.setStyleSheet("background-color: #0ca692;\n"
-        "font: 14pt \"Times\";\n"
-        "color: rgb(255, 255, 255);\n"
-        "border-radius: 5px;")
-        self.pushButton_Simulacion.setObjectName("pushButton_Simulacion")
 
 
 
@@ -244,7 +234,6 @@ class Ui_HomeAdmin(object):
         self.pushButton_Tienda.clicked.connect(self.openTienda)
         self.pushButton_MiMusica.raise_()
         self.pushButton_MiMusica.clicked.connect(self.openMiMusica)
-        self.pushButton_Simulacion.raise_()
         self.pushButton_Bitacora.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -278,8 +267,6 @@ class Ui_HomeAdmin(object):
         self.pushButton_GestionPermisos.setText(_translate("MainWindow", "Gestión de permisos"))
         self.pushButton_Buscar.clicked.connect(self.populateTable)
         self.pushButton_Tienda.setText(_translate("MainWindow", "Tienda"))
-        self.pushButton_Simulacion.setText(_translate("MainWindow", "Simulación"))
-        self.pushButton_Simulacion.clicked.connect(self.openSimulacion)
         self.pushButton_MiMusica.setText(_translate("MainWindow", "Mi Música"))
         self.pushButton_Bitacora.setText(_translate("MainWindow", "Bitácora"))
         self.pushButton_Bitacora.clicked.connect(self.openBitacora)
@@ -308,11 +295,6 @@ class Ui_HomeAdmin(object):
         self.ui.setupUi(self.window)
         self.window.show()
 
-    def openSimulacion(self, id):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Simulacion(self.id)
-        self.ui.setupUi(self.window)
-        self.window.show()
 
 
     def openMiMusica(self, id):
