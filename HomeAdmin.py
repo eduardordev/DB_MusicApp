@@ -8,7 +8,7 @@ from PyQt5.QtGui import QImage, QPainter
 from PyQt5.QtCore import QFile, QDir
 from HomeUserInactivarEliminar import Ui_HomeUserInactivarEliminar
 from HomeUserModificar import Ui_HomeUserModificar
-from Tienda import Ui_Tienda
+from PT import Ui_PT
 from HomeAdminReporteria import Ui_HomeAdminReporteria
 from HomeUserRegistrar import Ui_HomeUserRegistrar
 from HomeAdminGestionPermisos import Ui_HomeAdminGestionPermisos
@@ -180,14 +180,14 @@ class Ui_HomeAdmin(object):
 
 
 
-        self.pushButton_Tienda = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Tienda.setGeometry(QtCore.QRect(610, 30, 114, 32))
-        self.pushButton_Tienda.setMinimumSize(QtCore.QSize(130, 40))
-        self.pushButton_Tienda.setMaximumSize(QtCore.QSize(130, 40))
-        self.pushButton_Tienda.setStyleSheet("background-color: #0ca692;\n"
+        self.pushButton_Reproductor = QtWidgets.QPushButton(self.frame)
+        self.pushButton_Reproductor.setGeometry(QtCore.QRect(610, 30, 114, 32))
+        self.pushButton_Reproductor.setMinimumSize(QtCore.QSize(130, 40))
+        self.pushButton_Reproductor.setMaximumSize(QtCore.QSize(130, 40))
+        self.pushButton_Reproductor.setStyleSheet("background-color: #0ca692;\n"
         "font: 14pt \"Times\";\n"
         "color: rgb(255, 255, 255);")
-        self.pushButton_Tienda.setObjectName("pushButton_Tienda")
+        self.pushButton_Reproductor.setObjectName("pushButton_Reproductor")
 
 
 
@@ -216,8 +216,8 @@ class Ui_HomeAdmin(object):
         self.pushButton_Modficiar.raise_()
         self.pushButton_Buscar.raise_()
         self.pushButton_GestionPermisos.raise_()
-        self.pushButton_Tienda.raise_()
-        self.pushButton_Tienda.clicked.connect(self.openTienda)
+        self.pushButton_Reproductor.raise_()
+        self.pushButton_Reproductor.clicked.connect(self.openReproductor)
         self.pushButton_Bitacora.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -250,7 +250,7 @@ class Ui_HomeAdmin(object):
         self.pushButton_Buscar.setText(_translate("MainWindow", "Buscar"))
         self.pushButton_GestionPermisos.setText(_translate("MainWindow", "Gestión de permisos"))
         self.pushButton_Buscar.clicked.connect(self.populateTable)
-        self.pushButton_Tienda.setText(_translate("MainWindow", "Tienda"))
+        self.pushButton_Reproductor.setText(_translate("MainWindow", "Reproductor"))
         self.pushButton_Bitacora.setText(_translate("MainWindow", "Bitácora"))
         self.pushButton_Bitacora.clicked.connect(self.openBitacora)
 
@@ -266,9 +266,9 @@ class Ui_HomeAdmin(object):
         msgGood.setIcon(QMessageBox.Information)
         y = msgGood.exec_()
 
-    def openTienda(self, id):
+    def openReproductor(self, id):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Tienda(self.id)
+        self.ui = Ui_PT(self.id)
         self.ui.setupUi(self.window)
         self.window.show()
 

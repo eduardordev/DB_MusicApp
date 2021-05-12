@@ -3,14 +3,14 @@ import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.uic import loadUi
-from Carrito import Ui_Carrito
+from RPDR import Ui_RPDR
 #import pgdb as bd
 from config import config
 
 
-class Ui_Tienda(object):
+class Ui_PT(object):
     def __init__(self, id):
-        super(Ui_Tienda, self).__init__()
+        super(Ui_PT, self).__init__()
         self.id = id
     
     def setupUi(self, MainWindow):
@@ -145,7 +145,7 @@ class Ui_Tienda(object):
 
     def openCarrito(self, id):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Carrito(self.id)
+        self.ui = Ui_RPDR(self.id)
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -248,9 +248,9 @@ class Ui_Tienda(object):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    Tienda = QtWidgets.QMainWindow()
-    ui = Ui_Tienda()
-    ui.setupUi(Tienda)
-    Tienda.show()
+    PT = QtWidgets.QMainWindow()
+    ui = Ui_PT()
+    ui.setupUi(PT)
+    PT.show()
     sys.exit(app.exec_())
 

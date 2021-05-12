@@ -8,9 +8,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from config import config
 from fpdf import FPDF
 
-class Ui_Carrito(object):
+class Ui_RPDR(object):
     def __init__(self, id):
-        super(Ui_Carrito, self).__init__()
+        super(Ui_RPDR, self).__init__()
         self.id = id
 
     def setupUi(self, MainWindow):
@@ -265,9 +265,9 @@ class Ui_Carrito(object):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    Carrito = QtWidgets.QMainWindow()
-    ui = Ui_Carrito()
-    ui.setupUi(Carrito)
-    Carrito.show()
+    RPDR = QtWidgets.QMainWindow()
+    ui = Ui_RPDR()
+    ui.setupUi(RPDR)
+    RPDR.show()
     sys.exit(app.exec_())
 

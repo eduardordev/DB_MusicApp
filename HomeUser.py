@@ -3,7 +3,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.uic import loadUi
 import psycopg2 as bd
-from Tienda import Ui_Tienda
+from PT import Ui_PT
 from config import config
 
 
@@ -98,14 +98,14 @@ class Ui_HomeUser(object):
         self.pushButton_Buscar.setObjectName("pushButton_Buscar")
         self.pushButton_Buscar.clicked.connect(self.populateTable)
 
-        self.pushButton_Tienda = QtWidgets.QPushButton(self.frame)
-        self.pushButton_Tienda.setGeometry(QtCore.QRect(20, 220, 114, 32))
-        self.pushButton_Tienda.setMinimumSize(QtCore.QSize(200, 50))
-        self.pushButton_Tienda.setMaximumSize(QtCore.QSize(200, 50))
-        self.pushButton_Tienda.setStyleSheet("background-color: #0ca692;\n"
+        self.pushButton_Reproductor = QtWidgets.QPushButton(self.frame)
+        self.pushButton_Reproductor.setGeometry(QtCore.QRect(20, 220, 114, 32))
+        self.pushButton_Reproductor.setMinimumSize(QtCore.QSize(200, 50))
+        self.pushButton_Reproductor.setMaximumSize(QtCore.QSize(200, 50))
+        self.pushButton_Reproductor.setStyleSheet("background-color: #0ca692;\n"
 "font: 16pt \"Times\";\n"
 "color: rgb(255, 255, 255);")
-        self.pushButton_Tienda.setObjectName("pushButton_Tienda")
+        self.pushButton_Reproductor.setObjectName("pushButton_Reproductor")
 
 
 
@@ -115,8 +115,8 @@ class Ui_HomeUser(object):
         self.pushButton_Exit.raise_()
         self.textEdit_UserBuscar.raise_()
         self.comboBox_OpcionesBuscar.raise_()
-        self.pushButton_Tienda.raise_()
-        self.pushButton_Tienda.clicked.connect(self.openTienda)
+        self.pushButton_Reproductor.raise_()
+        self.pushButton_Reproductor.clicked.connect(self.openReproductor)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -141,7 +141,7 @@ class Ui_HomeUser(object):
         self.comboBox_OpcionesBuscar.setItemText(3, _translate("MainWindow", "Álbum"))
         self.comboBox_OpcionesBuscar.setItemText(4, _translate("MainWindow", "Canción"))
         self.pushButton_Buscar.setText(_translate("MainWindow", "Buscar"))
-        self.pushButton_Tienda.setText(_translate("MainWindow", "Reproductor"))
+        self.pushButton_Reproductor.setText(_translate("MainWindow", "Reproductor"))
 
     def openPopUpError(self):
         msgError = QMessageBox()
@@ -155,9 +155,9 @@ class Ui_HomeUser(object):
         msgGood.setIcon(QMessageBox.Information)
         y = msgGood.exec_()
 
-    def openTienda(self, id):
+    def openReproductor(self, id):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Tienda(self.id)
+        self.ui = Ui_PT(self.id)
         self.ui.setupUi(self.window)
         self.window.show()
 
