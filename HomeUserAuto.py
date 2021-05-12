@@ -1,13 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'HomeUserAuto.ui'
-#
-# Created by: PyQt5 UI code generator 5.12.3
-#
-# WARNING! All changes made in this file will be lost!
-
 import psycopg2 as bd
-#import pgdb as bd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 from HomeUserAutoRegistrar import Ui_HomeUserAutoRegistrar

@@ -115,6 +115,7 @@ class Ui_HomeAdminGestionPermisos(object):
         self.comboBox_OpcionesBuscar.addItem("")
         self.comboBox_OpcionesBuscar.addItem("")
         self.comboBox_OpcionesBuscar.addItem("")
+        self.comboBox_OpcionesBuscar.addItem("")
         self.pushButton_Buscar = QtWidgets.QPushButton(self.frame)
         self.pushButton_Buscar.setGeometry(QtCore.QRect(791, 200, 80, 31))
         self.pushButton_Buscar.setMinimumSize(QtCore.QSize(80, 31))
@@ -185,6 +186,7 @@ class Ui_HomeAdminGestionPermisos(object):
         self.comboBox_OpcionesBuscar.setItemText(1, _translate("MainWindow", "0"))
         self.comboBox_OpcionesBuscar.setItemText(2, _translate("MainWindow", "1"))
         self.comboBox_OpcionesBuscar.setItemText(3, _translate("MainWindow", "2"))
+        self.comboBox_OpcionesBuscar.setItemText(4, _translate("MainWindow", "3"))
         self.pushButton_Buscar.setText(_translate("MainWindow", "Buscar"))
         self.pushButton_Cambiar.setText(_translate("MainWindow", "Cambiar"))
 
@@ -256,13 +258,3 @@ class Ui_HomeAdminGestionPermisos(object):
         else:
             self.openPopUpError("Seleccione el permiso nuevo")
             print("Seleccione el permiso nuevo")
-
-
-# if __name__ == "__main__":
-#     app = QtWidgets.QApplication(sys.argv)
-#     HomeAdminGestionPermisos = QtWidgets.QMainWindow()
-#     ui = Ui_HomeAdminGestionPermisos()
-#     ui.setupUi(HomeAdminGestionPermisos)
-#     HomeAdminGestionPermisos.show()
-#     sys.exit(app.exec_())
-

@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'LoginAccount.ui'
-#
-# Created by: PyQt5 UI code generator 5.12.3
-#
-# WARNING! All changes made in this file will be lost!
-
 import psycopg2 as bd
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -15,7 +7,7 @@ from HomeAdmin import Ui_HomeAdmin
 from CreateAccount import Ui_CreateAccount
 from HomeUserAuto import Ui_HomeUserAuto
 from HomeUser import Ui_HomeUser
-#import pgdb as bd
+from AdminMA import Ui_AdminMA
 from config import config
 
 class Ui_LoginAccount(object):
@@ -197,6 +189,15 @@ class Ui_LoginAccount(object):
         LoginAccount.hide()
         self.window.show()
 
+    def openAdminMA(self, id):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_AdminMA(id)
+        self.ui.setupUi(self.window)
+        LoginAccount.hide()
+        self.window.show()
+
+
+
     def getLogin(self):
         conn=None
         try:
@@ -222,6 +223,8 @@ class Ui_LoginAccount(object):
                                 self.openHomeAdmin(record[0][3])
                         elif (record[0][2] == 1 ):
                                 self.openHomeUserAuto(record[0][3])
+                        elif (record[0][2] == 3 ):
+                                self.openAdminMA(record[0][3])
                         else:
                                 self.openHomeUser(record[0][3])
                 else:
