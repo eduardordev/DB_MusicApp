@@ -3,9 +3,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.uic import loadUi
 import psycopg2 as bd
-from Tienda import Ui_Tienda
+
 from config import config
-from MiMusica import Ui_MiMusica
+
 
 
 class Ui_HomeUser(object):
@@ -161,17 +161,6 @@ class Ui_HomeUser(object):
         msgGood.setIcon(QMessageBox.Information)
         y = msgGood.exec_()
 
-    def openTienda(self, id):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Tienda(self.id)
-        self.ui.setupUi(self.window)
-        self.window.show()
-
-    def openMiMusica(self,id):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_MiMusica(self.id)
-        self.ui.setupUi(self.window)
-        self.window.show()
 
     def populateTable(self):
         #clear the table
