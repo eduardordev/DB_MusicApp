@@ -15,6 +15,7 @@ from HomeAdminGestionPermisos import Ui_HomeAdminGestionPermisos
 from Bitacora import Ui_Bitacora
 from queries import *
 from config import config
+from Mongo import Ui_Mongo
 
 
 class Ui_HomeAdmin(object):
@@ -191,8 +192,6 @@ class Ui_HomeAdmin(object):
 
 
 
-
-
         self.pushButton_Bitacora = QtWidgets.QPushButton(self.frame)
         self.pushButton_Bitacora.setGeometry(QtCore.QRect(80, 310, 100, 30))
         self.pushButton_Bitacora.setMinimumSize(QtCore.QSize(350, 50))
@@ -204,6 +203,15 @@ class Ui_HomeAdmin(object):
         self.pushButton_Bitacora.setObjectName("pushButton_Bitacora")
 
 
+
+        self.pushButton_Mongo =  QtWidgets.QPushButton(self.frame)
+        self.pushButton_Mongo.setGeometry(QtCore.QRect(470, 30, 114, 32))
+        self.pushButton_Mongo.setMinimumSize(QtCore.QSize(130, 40))
+        self.pushButton_Mongo.setMaximumSize(QtCore.QSize(130, 40))
+        self.pushButton_Mongo.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);")
+        self.pushButton_Mongo.setObjectName("pushButton_Mongo")
 
 
         self.comboBox_OpcionesBuscar.raise_()
@@ -218,6 +226,8 @@ class Ui_HomeAdmin(object):
         self.pushButton_GestionPermisos.raise_()
         self.pushButton_Reproductor.raise_()
         self.pushButton_Reproductor.clicked.connect(self.openReproductor)
+        self.pushButton_Mongo.raise_()
+        self.pushButton_Mongo.clicked.connect(self.openMongo)
         self.pushButton_Bitacora.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -251,6 +261,7 @@ class Ui_HomeAdmin(object):
         self.pushButton_GestionPermisos.setText(_translate("MainWindow", "Gestión de permisos"))
         self.pushButton_Buscar.clicked.connect(self.populateTable)
         self.pushButton_Reproductor.setText(_translate("MainWindow", "Reproductor"))
+        self.pushButton_Mongo.setText(_translate("MainWindow", "Mongo"))
         self.pushButton_Bitacora.setText(_translate("MainWindow", "Bitácora"))
         self.pushButton_Bitacora.clicked.connect(self.openBitacora)
 
@@ -271,6 +282,14 @@ class Ui_HomeAdmin(object):
         self.ui = Ui_PT(self.id)
         self.ui.setupUi(self.window)
         self.window.show()
+
+
+    def openMongo(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_Mongo()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
 
     def openBitacora(self, id):
         self.window = QtWidgets.QMainWindow()
