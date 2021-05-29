@@ -16,6 +16,7 @@ from Bitacora import Ui_Bitacora
 from queries import *
 from config import config
 from Mongo import Ui_Mongo
+from Simulacion import Ui_Simulacion
 
 
 class Ui_HomeAdmin(object):
@@ -139,6 +140,17 @@ class Ui_HomeAdmin(object):
         self.pushButton_Reporteria.clicked.connect(self.openHomeAdminReporteria)
 
 
+        self.pushButton_Simulacion = QtWidgets.QPushButton(self.frame)
+        self.pushButton_Simulacion.setGeometry(QtCore.QRect(80, 476, 100, 30))
+        self.pushButton_Simulacion.setMinimumSize(QtCore.QSize(350, 50))
+        self.pushButton_Simulacion.setMaximumSize(QtCore.QSize(350, 50))
+        self.pushButton_Simulacion.setStyleSheet("background-color: #0ca692;\n"
+        "font: 14pt \"Times\";\n"
+        "color: rgb(255, 255, 255);\n"
+        "border-radius: 5px;")
+        self.pushButton_Simulacion.setObjectName("pushButton_Simulacion")
+        self.pushButton_Simulacion.clicked.connect(self.openSimulacion)
+
 
         self.comboBox_OpcionesBuscar = QtWidgets.QComboBox(self.frame)
         self.comboBox_OpcionesBuscar.setGeometry(QtCore.QRect(470, 80, 175, 30))
@@ -225,6 +237,7 @@ class Ui_HomeAdmin(object):
         self.pushButton_Buscar.raise_()
         self.pushButton_GestionPermisos.raise_()
         self.pushButton_Reproductor.raise_()
+        self.pushButton_Simulacion.raise_()
         self.pushButton_Reproductor.clicked.connect(self.openReproductor)
         self.pushButton_Mongo.raise_()
         self.pushButton_Mongo.clicked.connect(self.openMongo)
@@ -248,6 +261,7 @@ class Ui_HomeAdmin(object):
 "</style></head><body style=\" font-family:\'Times\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.pushButton_Registro.setText(_translate("MainWindow", "Registro"))
+        self.pushButton_Simulacion.setText(_translate("MainWindow", "Simulacion"))
         self.pushButton_Inactivar.setText(_translate("MainWindow", "Modificación"))
         self.pushButton_Modficiar.setText(_translate("MainWindow", "Inactivación/Eliminación"))
         self.pushButton_Reporteria.setText(_translate("MainWindow", "Reportería"))
@@ -280,6 +294,13 @@ class Ui_HomeAdmin(object):
     def openReproductor(self, id):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_PT(self.id)
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+
+    def openSimulacion(self, id):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_Simulacion(self.id)
         self.ui.setupUi(self.window)
         self.window.show()
 
