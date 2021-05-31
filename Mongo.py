@@ -11,20 +11,20 @@ MONGO_PORT = 'mongodb://localhost:27017'
 
 
 class Ui_Mongo(object):
-    # Esta es la configuracion por DEFAULT, cambiar de ser necesario
+    # Esta es la confi basica, si quieren la pueden cambiar
     myClient = pymongo.MongoClient(MONGO_PORT)
-    mydb = myClient['proyecto']
+    mydb = myClient['Instancia_Proyecto']
     clientes = mydb['client']
     compras = mydb['invoice']
-    #Limpio mi bd en MONGO
-    mydb.invoice.delete_many({})  # Esta es para las ventas por fecha
-    mydb.customers.delete_many({})# Esta es para todas las compras de todos los clientes
+    #BD vacia en mongo
+    mydb.invoice.delete_many({})  # Esta es para las fechas
+    mydb.customers.delete_many({})# Esta es para todos los clientes
     mydb.releases.delete_many({})  # Esta es para los ultimos releases
-    mydb.usuariosrecomendados.delete_many({}) # En esta coleccion se almacenan los usuarios con sus recomendaciones
+    mydb.usuariosrecomendados.delete_many({}) # En esta coleccion se almacenan las recomendaciones
     
-    DEFAULT_FECHA = '2009/1/1'
+    DEFAULT_FECHA = '2000/1/1'
     def convert(self, date_time):
-        format = '%Y-%m-%d'  # The format
+        format = '%Y-%m-%d'
         datetime_str = datetime.datetime.strftime(date_time, format)
         return datetime_str
 
@@ -75,14 +75,14 @@ class Ui_Mongo(object):
             })
         return lista
 
-    #Parametros de POSTGRESQL
+    #Lo de PGAdmin
     params = config()
     conn = bd.connect(**params)
     cursor = conn.cursor()
 
     DATE = '2009-01-01'
 
-    #MIGRACION DE DATOS A MONGO
+    #Comienza los traslados a Mongo
 
     queryTodosClientes = """SELECT DISTINCT user_client.clientid, invoice.invoicedate AS fecha ,
 	user_client.username AS nombre, billingcity AS ciudad, 
@@ -94,15 +94,14 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
 	JOIN artist ON artist.artistid = album.artistid
 	JOIN user_client ON user_client.clientid = invoice.customerid
 	JOIN genre ON track.genreid = genre.genreid
---WHERE invoice.invoicedate= \'2009/1/1\'
 """
 
 
     cursor.execute(queryTodosClientes)
     record = cursor.fetchall()
-    # Los seriaizo a un diccionario
+    
     lista = todosClientesSerializer(record)
-    #Los agrego a mi coleccion
+    
     if (len(lista) !=0):
         mydb.customers.insert_many(lista)
 
@@ -114,23 +113,23 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
         JOIN genre ON genre.genreid = track.genreid
     WHERE tablemodified = 'track' 
     ORDER BY releasedate DESC
-    --LIMIT 20
+    
     """
 
     cursor.execute(queryLatestRelases)
     record = cursor.fetchall()
-    # Los seriaizo a un diccionario
+    
     lista = latestReleasesSerializer(record)
-    #Los agrego a mi coleccion
+    
     if (len(lista) != 0):
         mydb.releases.insert_many(lista)
 
-    # #El sistema funciona con puntos
+    
 
 
-    canciones = mydb.releases.find({})  # Lista de diccionarios
+    canciones = mydb.releases.find({})  
     usuarios = mydb.customers.find({}, {'cid': 1}).distinct(
-        'cid')  # lista plana (solo de CIDs)
+        'cid')  
     for cancion in canciones:
         for usuario in usuarios:
             esta_cancion = {'cancion': cancion['cancion'], 'genero': cancion['genero'],
@@ -161,7 +160,6 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
         mydb.usuariosrecomendados.insert_one({
             'Customer ID': cid,
             'Nombre': customer['nombre'],
-            # Ordenadas en orden descendente
             'sugerencias': sorted(customer['sugerencias'], key=takeList)[::-1]
         })
 
@@ -170,7 +168,7 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
         self.DATE = newDate
         return self.DATE == newDate
 
-
+    #Esta es la parte visual, no tiene relevancia
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1000, 650)
@@ -255,7 +253,7 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    #segundaparte
+    #segunda parte de la codificacion 
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -269,7 +267,7 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
         return item['sugerencias'][0]['puntuacion']
     
     def populateTable(self):
-        fecha = self.DATE#calendarWidget.selectedDate().toString('yyyy-MM-dd')
+        fecha = self.DATE
         self.tableWidget.setRowCount(0)
         if (self.comboBox_OpcionesBuscar.currentText() == "Clientes por fecha"):
             self.mydb.invoice.delete_many({})
