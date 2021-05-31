@@ -271,7 +271,7 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
         self.tableWidget.setRowCount(0)
         if (self.comboBox_OpcionesBuscar.currentText() == "Clientes por fecha"):
             self.mydb.invoice.delete_many({})
-            print('ENTRAMOS AL CONDICIONAL')
+            print('SI FUNCIONAAAAA :))))   ')
             queryPorFecha = """SELECT DISTINCT user_client.clientid, user_client.username as nombre,
                 invoice.billingcountry as pais, invoice.billingstate as estado, invoice.billingcity as ciudad, invoice.invoicedate
                 FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
