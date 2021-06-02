@@ -35,10 +35,7 @@ class Ui_Mongo(object):
                 {
                     'customerid': i[0],
                     'nombre': i[1],
-                    'pais': i[2],
-                    'estado': i[3],
-                    'ciudad': i[4],
-                    'fecha' : self.convert(i[5])
+                    'fecha' : self.convert(i[2])
                 }
         )
         return lista
@@ -273,7 +270,7 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
             self.mydb.invoice.delete_many({})
             print('SI FUNCIONAAAAA :))))   ')
             queryPorFecha = """SELECT DISTINCT user_client.clientid, user_client.username as nombre,
-                invoice.billingcountry as pais, invoice.billingstate as estado, invoice.billingcity as ciudad, invoice.invoicedate
+                invoice.invoicedate
                 FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
                 JOIN user_client ON invoice.customerid = user_client.clientid
                 WHERE invoice.invoicedate = \'{}\'
@@ -295,8 +292,7 @@ FROM invoice JOIN invoiceline ON invoice.invoiceid = invoiceline.invoiceid
                 rowposition = self.tableWidget.rowCount()
                 self.tableWidget.insertRow(rowposition)
                 self.tableWidget.setItem(rowposition, 0, QtWidgets.QTableWidgetItem(item['nombre']))
-                self.tableWidget.setItem(rowposition, 1, QtWidgets.QTableWidgetItem(item['pais']))
-                self.tableWidget.setItem(rowposition, 2, QtWidgets.QTableWidgetItem(item['fecha']))
+                self.tableWidget.setItem(rowposition, 1, QtWidgets.QTableWidgetItem(item['fecha']))
         if (self.comboBox_OpcionesBuscar.currentText() == "Sugerencias"):
             recomendaciones = list(self.mydb.usuariosrecomendados.find({}))
             usuariosRec = sorted(recomendaciones, key = self.useFirstRec)[::-1]
