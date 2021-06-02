@@ -132,9 +132,9 @@ class Ui_Simulacion(object):
             fecha =self.DATE
             cantidad = self.textEdit_UserBuscar.toPlainText()
             cantidad = int(cantidad)
-            
-            a = self.textEdit_UserBuscar.toPlainText()
-            a = int(cantidad)
+            totalr = self.textEdit_UserBuscar.toPlainText()
+            totalr = int(cantidad)
+            totalt = random.randint(0,100)
 
             params = config()
             conn = bd.connect(**params)
@@ -196,7 +196,7 @@ class Ui_Simulacion(object):
                     totalComp+=1
                 invoiceId+=1
             conn.commit()
-            self.openPopUpError('Simulacion exitosa:'+str(a)+' tracks generadas y '+str(totalComp)+' reproducciones')
+            self.openPopUpError('Simulacion exitosa:'+str(totalr)+' tracks generadas y '+str(totalt)+' reproducciones')
 
 
         except(Exception) as error:
