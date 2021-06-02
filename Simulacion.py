@@ -196,7 +196,7 @@ class Ui_Simulacion(object):
                     totalComp+=1
                 invoiceId+=1
             conn.commit()
-            self.openPopUpError('Simulacion exitosa:'+str(totalRep)+' reproducciones y '+str(a)+' compras')
+            self.openPopUpError('Simulacion exitosa:'+str(a)+' reproducciones y '+str(totalComp)+' compras')
 
 
         except(Exception) as error:
