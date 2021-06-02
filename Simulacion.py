@@ -191,7 +191,7 @@ class Ui_Simulacion(object):
                     query2= "INSERT INTO invoiceline(invoicelineid, invoiceid, trackid, unitprice, quantity) VALUES (%s,%s,%s,%s,%s)"
                     data = (invoicelineId, invoiceId, trackId, 0.99, 1)
                     cursor.execute(query2, data)
-                    print('compra',trackId, invoiceId)
+                    print('simulacion',trackId, invoiceId)
                     invoicelineId +=1
                     totalComp+=1
                 invoiceId+=1

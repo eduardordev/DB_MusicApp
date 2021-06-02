@@ -1,0 +1,334 @@
+[{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f040"
+  },
+  "fecha": "2021-06-02",
+  "cancion": "edupu",
+  "album": "#Keremos100",
+  "artista": "Randy",
+  "genero": "Latin"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f041"
+  },
+  "fecha": "2021-06-02",
+  "cancion": "lospibes",
+  "album": "#Keremos100",
+  "artista": "Randy",
+  "genero": "Latin"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f042"
+  },
+  "fecha": "2021-06-02",
+  "cancion": "monica",
+  "album": "#Keremos100",
+  "artista": "Randy",
+  "genero": "Latin"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f043"
+  },
+  "fecha": "2021-06-01",
+  "cancion": "20dproyecto",
+  "album": "#Keremos100",
+  "artista": "Randy",
+  "genero": "Latin"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f044"
+  },
+  "fecha": "2021-05-12",
+  "cancion": "Prueba",
+  "album": "Balls to the Wall",
+  "artista": "Accept",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f045"
+  },
+  "fecha": "2021-05-12",
+  "cancion": "Prueba",
+  "album": "Balls to the Wall",
+  "artista": "Accept",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f046"
+  },
+  "fecha": "2021-05-12",
+  "cancion": "Prueba",
+  "album": "Balls to the Wall",
+  "artista": "Accept",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f047"
+  },
+  "fecha": "2021-05-12",
+  "cancion": "Prueba",
+  "album": "Balls to the Wall",
+  "artista": "Accept",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f048"
+  },
+  "fecha": "2021-05-12",
+  "cancion": "Prueba",
+  "album": "Balls to the Wall",
+  "artista": "Accept",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f049"
+  },
+  "fecha": "2021-05-11",
+  "cancion": "Prueba",
+  "album": "Balls to the Wall",
+  "artista": "Accept",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f04a"
+  },
+  "fecha": "2021-05-11",
+  "cancion": "The Fly",
+  "album": "Achtung Baby",
+  "artista": "U2",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f04b"
+  },
+  "fecha": "2021-05-10",
+  "cancion": "Prueba",
+  "album": "Balls to the Wall",
+  "artista": "Accept",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f04c"
+  },
+  "fecha": "2020-05-22",
+  "cancion": "Insensível",
+  "album": "Volume Dois",
+  "artista": "Titãs",
+  "genero": "Alternative & Punk"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f04d"
+  },
+  "fecha": "2020-05-22",
+  "cancion": "The Deeper The Love",
+  "album": "Greatest Hits",
+  "artista": "Lenny Kravitz",
+  "genero": "Metal"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f04e"
+  },
+  "fecha": "2020-05-21",
+  "cancion": "Despertar",
+  "album": "Quiet Songs",
+  "artista": "Aisha Duo",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f04f"
+  },
+  "fecha": "2020-05-21",
+  "cancion": "Twice As Hard",
+  "album": "Live [Disc 2]",
+  "artista": "The Black Crowes",
+  "genero": "Blues"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f050"
+  },
+  "fecha": "2020-05-21",
+  "cancion": "Twice As Hard",
+  "album": "Live [Disc 2]",
+  "artista": "The Black Crowes",
+  "genero": "Blues"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f051"
+  },
+  "fecha": "2020-05-20",
+  "cancion": "Overdose",
+  "album": "Let There Be Rock",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f052"
+  },
+  "fecha": "2020-05-19",
+  "cancion": "Problem Child",
+  "album": "Let There Be Rock",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f053"
+  },
+  "fecha": "2020-05-18",
+  "cancion": "Bad Boy Boogie",
+  "album": "Let There Be Rock",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f054"
+  },
+  "fecha": "2020-05-17",
+  "cancion": "Let There Be Rock",
+  "album": "Let There Be Rock",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f055"
+  },
+  "fecha": "2020-05-16",
+  "cancion": "Dog Eat Dog",
+  "album": "Let There Be Rock",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f056"
+  },
+  "fecha": "2020-05-15",
+  "cancion": "Go Down",
+  "album": "Let There Be Rock",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f057"
+  },
+  "fecha": "2020-05-14",
+  "cancion": "Spellbound",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f058"
+  },
+  "fecha": "2020-05-13",
+  "cancion": "Night Of The Long Knives",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f059"
+  },
+  "fecha": "2020-05-12",
+  "cancion": "Breaking The Rules",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f05a"
+  },
+  "fecha": "2020-05-11",
+  "cancion": "C.O.D.",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f05b"
+  },
+  "fecha": "2020-05-10",
+  "cancion": "Evil Walks",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f05c"
+  },
+  "fecha": "2020-05-09",
+  "cancion": "Snowballed",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f05d"
+  },
+  "fecha": "2020-05-08",
+  "cancion": "Inject The Venom",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f05e"
+  },
+  "fecha": "2020-05-07",
+  "cancion": "Let's Get It Up",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f05f"
+  },
+  "fecha": "2020-05-06",
+  "cancion": "Put The Finger On You",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f060"
+  },
+  "fecha": "2020-05-05",
+  "cancion": "Princess of the Dawn",
+  "album": "Restless and Wild",
+  "artista": "Accept",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f061"
+  },
+  "fecha": "2020-05-04",
+  "cancion": "Restless and Wild",
+  "album": "Restless and Wild",
+  "artista": "Accept",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f062"
+  },
+  "fecha": "2020-05-03",
+  "cancion": "Fast As a Shark",
+  "album": "Restless and Wild",
+  "artista": "Accept",
+  "genero": "Rock"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f063"
+  },
+  "fecha": "2020-05-02",
+  "cancion": "Prueba",
+  "album": "Balls to the Wall",
+  "artista": "Accept",
+  "genero": "Jazz"
+},{
+  "_id": {
+    "$oid": "60b7eb3aed6ef48d1cd5f064"
+  },
+  "fecha": "2020-05-01",
+  "cancion": "For Those About To Rock (We Salute You)",
+  "album": "For Those About To Rock We Salute You",
+  "artista": "AC/DC",
+  "genero": "Rock"
+}]

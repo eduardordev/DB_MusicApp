@@ -1,0 +1,197 @@
+[{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0a8"
+  },
+  "customerid": 5,
+  "nombre": "tst3",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0a9"
+  },
+  "customerid": 65,
+  "nombre": "randy2",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0aa"
+  },
+  "customerid": 41,
+  "nombre": "tst39",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0ab"
+  },
+  "customerid": 54,
+  "nombre": "tst52",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0ac"
+  },
+  "customerid": 34,
+  "nombre": "tst32",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0ad"
+  },
+  "customerid": 60,
+  "nombre": "luisg95",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0ae"
+  },
+  "customerid": 31,
+  "nombre": "tst29",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0af"
+  },
+  "customerid": 48,
+  "nombre": "tst46",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b0"
+  },
+  "customerid": 64,
+  "nombre": "randy",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b1"
+  },
+  "customerid": 46,
+  "nombre": "tst44",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b2"
+  },
+  "customerid": 26,
+  "nombre": "tst24",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b3"
+  },
+  "customerid": 23,
+  "nombre": "tst21",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b4"
+  },
+  "customerid": 37,
+  "nombre": "tst35",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b5"
+  },
+  "customerid": 56,
+  "nombre": "tst54",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b6"
+  },
+  "customerid": 36,
+  "nombre": "tst34",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b7"
+  },
+  "customerid": 7,
+  "nombre": "tst5",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b8"
+  },
+  "customerid": 3,
+  "nombre": "tst1",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0b9"
+  },
+  "customerid": 55,
+  "nombre": "tst53",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0ba"
+  },
+  "customerid": 4,
+  "nombre": "prueba2",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0bb"
+  },
+  "customerid": 14,
+  "nombre": "tst12",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0bc"
+  },
+  "customerid": 18,
+  "nombre": "tst16",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0bd"
+  },
+  "customerid": 28,
+  "nombre": "tst26",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0be"
+  },
+  "customerid": 21,
+  "nombre": "tst19",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0bf"
+  },
+  "customerid": 61,
+  "nombre": "tst0",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0c0"
+  },
+  "customerid": 25,
+  "nombre": "tst23",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0c1"
+  },
+  "customerid": 53,
+  "nombre": "tst51",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0c2"
+  },
+  "customerid": 9,
+  "nombre": "tst7",
+  "fecha": "2021-05-10"
+},{
+  "_id": {
+    "$oid": "60b7ecfaed6ef48d1cd5f0c3"
+  },
+  "customerid": 38,
+  "nombre": "tst36",
+  "fecha": "2021-05-10"
+}]
